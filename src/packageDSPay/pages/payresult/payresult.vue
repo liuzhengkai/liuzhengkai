@@ -86,10 +86,10 @@
     <view class="modal" v-if="showModal">
       <view class="modal-content">
         <view class="model-content-upper">
-          <image class="model-content-upper-bg" src="../../../assets/images/ds_footer.png"></image>
-          <view class="model-content-upper-code">
+          <image class="model-content-upper-bg" src="../../images/ds_QRCode.png"></image>
+          <!-- <view class="model-content-upper-code">
             <image  class="model-content-code-img" mode="widthFix" src="../../../assets/images/ds_reg_code.png" alt=""></image>
-          </view>
+          </view> -->
         </view>
         <view class="modal-content-text">请前往应用商店下载“网上国网”APP，或扫描二维码打开下载链接进行下载APP</view>
         <view class="modal-content-btn" @tap="know">我知道了</view>
@@ -140,7 +140,7 @@
       if(this.careEnv == '1') {
         this.titleBarObj.arrowWhite = false;
       }
-      if(process.env.TARO_ENV == 'alipay' || process.env.TARO_ENV == 'weapp') {
+      if(process.env.TARO_ENV == 'weapp') {
         this.titleBarObj.arrowWhite = true
       }
       dsUtils.dataCollection({
