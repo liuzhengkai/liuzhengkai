@@ -1,0 +1,73 @@
+.quickLogin {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+
+  .quickLogin_titlebar {
+    width: 100%;
+    flex-shrink: 0;
+    z-index: 999;
+  }
+
+  .quickLogin_body {
+    width: 100%;
+    flex: 1; //除titlebar所占用高度外, 填满其余高度
+    overflow-y: scroll;
+    .quickLogin_img {
+      width: 100vw;
+      position: absolute;
+      top: 0;
+      z-index: 1;
+    }
+    .register {
+      margin-top: 592px;
+      padding-top: 69px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .loginBtn_img {
+        width: 550px;
+        height: 109px;
+      }
+      .loginBtn {
+        margin-top: -109px;
+        width: 550px;
+        height: 109px;
+        opacity: 0;
+      }
+      button::after{ //百度小程序button边框
+        border: none;
+      }
+      .otherPhNum {
+        margin-top: 40px;
+        font-size: 28px;
+        color: #FF824F;
+        text-decoration: underline;
+      }
+    }
+    .agreement {
+      margin-top: 40px;
+      padding: 0px 40px;
+      display: flex;
+      .agreement_checkBox {
+        margin-right: 14px;
+        .checkBox_img {
+          width: 30px;
+          height: 30px;
+        }
+      }
+      .agreement_textBox {
+        font-size: 28px;
+        color: #666666;
+        line-height: 40px;
+      }
+    }
+  }
+
+  .quickLogin_footer {
+    .footer_img {
+      width: 100vw;
+    }
+  }
+}

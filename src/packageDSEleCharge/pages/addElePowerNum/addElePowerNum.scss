@@ -1,0 +1,488 @@
+.defaultWrap {
+
+  .container_add {
+    width: 100%;
+    height: 100vh;
+    background: #F7F8FA;
+  }
+
+  .add_content .weui-input::placeholder {
+    color: #ccc;
+  }
+
+  .custom {
+    width: 100%;
+  }
+
+  .back_bg_box {
+    position: absolute;
+    top: 16px;
+    left: 0;
+    width: 60px;
+    z-index: 999;
+  }
+
+  // .back_bg {
+  //   position: absolute;
+  //   width: 20px;
+  //   height: 40px;
+  //   padding-left: 30px;
+  // }
+
+  .title {
+    width: 100%;
+    color: white;
+    position: absolute;
+    height: 88px;
+    line-height: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 28px;
+    z-index: 2;
+  }
+
+  .header_bg_addCons {
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+
+  .ADD_TitleBar_H5 {
+    margin-top: 380px;
+  }
+
+  .add_content {
+    width: 100%;
+    position: absolute;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    z-index: 2;
+  }
+
+  .addAccountNum {
+    margin: 20px 5% 20px 5%;
+    padding: 40px 30px 46px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .chooseAddress {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    border-bottom: solid 1px #EDEDED;
+    font-size: 38px;
+    .provinceName {
+      font-size: 33rpx;
+    }
+    .provinceNameText {
+      color: #898989;
+      font-size: 33rpx;
+    }
+  }
+
+  .rightArrow {
+    width: 16px;
+    height: 32px;
+  }
+
+  .inputText {
+    color: #929292;
+    font-size: 28px;
+    margin-top: 28px;
+  }
+
+  .placeholder-class{
+    color:#898989;
+  }
+
+  .weui-input {
+    padding: 0;
+  }
+
+  .input_cons {
+    margin-top: 30px;
+    font-size: 33rpx;
+  }
+
+  .addressText {
+    color: #929292;
+    font-size: 28px;
+  }
+
+  .getCons {
+    width: 90%;
+    color: #11A9B0;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5%;
+    height: 50px;
+    line-height: 50px;
+  }
+
+  .btn_addCons {
+    width: 90% !important;
+    height: 100px;
+    line-height: 100px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 5%;
+    background-image: linear-gradient(-32deg, #10A8AF 0%, #13AAB1 50%, #75D3D4 100%);
+    color: #fff;
+    padding: 0px;
+    border-radius: 10px;
+  }
+
+  .add_tips {
+    color: #5C5C5C;
+    margin-bottom: 20px;
+  }
+
+  .add_list {
+    width: 100%;
+    height: calc(100vh - 1000px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  .add_list_item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    border-top: 1px solid #EDEDED;
+    padding: 24px 5%;
+    box-sizing: border-box;
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .item_address {
+    color: #929292;
+    font-size: 28px;
+    margin-top: 8px;
+  }
+
+  .rightArrow2 {
+    z-index: 999;
+  }
+
+  .picker {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 700px;
+    background-color: white;
+  }
+
+  .picker-title {
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 20px 20px 0 0;
+    color: #238CF0;
+  }
+
+  .picker-view {
+    width: 100%;
+    height: 600px;
+  }
+
+  .picker-item {
+    width: 100%;
+    height: 42px;
+    line-height: 42px;
+    text-align: center;
+  }
+
+}
+
+.careWrap {
+  #theFixedBox {
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+  }
+  width: 100%;
+  height: 100vh;
+  // overflow: hidden;
+  .add_content .weui-input::placeholder {
+    color: #ccc;
+  }
+  .container_add {
+    width: 100%;
+    height: 100vh;
+    background: #F7F8FA;
+    position: fixed;
+  }
+
+  .custom {
+    width: 100%;
+  }
+
+  .back_bg_box {
+    position: absolute;
+    top: 16px;
+    left: 0;
+    width: 60px;
+    z-index: 999;
+  }
+
+  // .back_bg {
+  //   position: absolute;
+  //   width: 20px;
+  //   height: 40px;
+  //   padding-left: 30px;
+  // }
+
+  .title {
+    width: 100%;
+    color: white;
+    position: absolute;
+    height: 88px;
+    line-height: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 28px;
+    z-index: 2;
+  }
+
+  .header_bg_addCons {
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    top: -20px;
+    left: 0;
+    z-index: 0;
+    .taro-img__mode-widthfix {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .ADD_TitleBar_H5 {
+    margin-top: 200px;
+  }
+
+  .add_content {
+    width: 100%;
+    position: absolute;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    z-index: 2;
+  }
+
+  .addAccountNum {
+    margin: 60px 5% 20px 5%;
+    padding: 30px 30px 46px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    .van-cell, .van-field{
+      padding: 0;
+    }
+  }
+
+  .chooseAddress {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    border-bottom: solid 1px #EDEDED;
+    font-size: 38px;
+    .provinceName {
+      font-size: 46px;
+    }
+    .provinceNameText {
+      color: #898989;
+      font-size: 46px;
+    }
+  }
+
+  .rightArrow {
+    width: 16px;
+    height: 32px;
+  }
+
+  .inputText {
+    color: #929292;
+    font-size: 28px;
+    margin-top: 28px;
+  }
+
+  .weui-input {
+    padding: 0;
+  }
+
+  .input_cons {
+    margin-top: 10px;
+    font-size: 60px;
+  }
+
+  .van-field__control::-webkit-input-placeholder,
+    textarea::-webkit-input-placeholder {
+    color: #898989;
+    font-size: 46px;
+  }
+    
+  .van-field__control:-moz-placeholder,
+    textarea:-moz-placeholder {
+    color: #898989;
+    font-size: 46px;
+  }
+    
+  .van-field__control::-moz-placeholder,
+    textarea::-moz-placeholder {
+    color: #898989;
+    font-size: 46px;
+  }
+    
+  .van-field__control:-ms-input-placeholder,
+    textarea:-ms-input-placeholder {
+    color: #898989;
+    font-size: 46px;
+  }
+
+  .addressText {
+    color: #929292;
+    font-size: 28px;
+  }
+
+  .getCons {
+    width: 90%;
+    color: #27C1B8;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5%;
+    height: 50px;
+    line-height: 50px;
+  }
+
+  .btn_green_addCons {
+    width: 90% !important;
+    height: 100px;
+    line-height: 100px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 5%;
+    background: #098299;
+    color: #fff;
+    padding: 0px;
+  }
+
+  .add_tips {
+    color: #5C5C5C;
+    margin-bottom: 20px;
+    font-size: 30px;
+    line-height: 40px;
+    padding-left: 30px;
+  }
+
+  .add_list {
+    width: 100%;
+    height: calc(100vh - 1060px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  .add_list_item {
+    height: 134px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-top: 1px solid #EDEDED;
+    padding: 24px 5%;
+    box-sizing: border-box;
+
+  }
+  .add_list_item:last-child {
+    margin-bottom: 50px;
+  }
+    .left {
+      display: flex;
+      flex-direction: column;
+      font-size: 28px;
+      color: #333333;
+      line-height: 40px;
+      flex:6;
+
+    }
+    .item_address {
+      color: #929292;
+      font-size: 28px;
+      margin-top: 8px;
+      width: 95%;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      word-break: break-all;
+    }
+    .rightArrow2 {
+
+      z-index: 999;
+      // margin: 0px 20px ;
+      flex:1;
+    }
+  .picker {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 700px;
+    background-color: white;
+  }
+
+  .picker-title {
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 20px 20px 0 0;
+    color: #238CF0;
+  }
+
+  .picker-view {
+    width: 100%;
+    height: 600px;
+  }
+
+  .picker-item {
+    width: 100%;
+    height: 42px;
+    line-height: 42px;
+    text-align: center;
+  }
+
+}

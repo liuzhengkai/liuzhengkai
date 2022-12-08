@@ -1,0 +1,380 @@
+#theFixedBox {
+  position:fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+}
+
+.root {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #F7F8FA;
+}
+
+.preventTouchMove{
+  top: 0px ; 
+  left:   0px ; 
+  width:   100% ; 
+  height:   100% ; 
+  background: #F7F8FA;
+  overflow:   hidden ; 
+  position:   fixed ; 
+  z-index:   0 ; 
+}
+
+.noList_content {
+  width: 100%;
+  position: absolute;
+  top: 10%;
+  left: 0;
+  z-index: 2;
+  margin-top: 5%;
+}
+
+.bl_tips {
+  display: flex;
+  padding-left: 5%;
+  color: #FFFFFF;
+  font-size: 32px;
+}
+
+.ds_bill_bg{
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.ds_bill_bg_content{
+  width: 100%;
+  height: 939px;
+  z-index: 2;
+  margin-top: 20px;
+}
+
+.ds_topBg {
+  width: 100%;
+  height: 366px;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.immediatelyPay {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 64px;
+  opacity: 0.4;
+  background: #11A9B0;
+  padding: 0 5%;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 24px;
+}
+
+.notice {
+  width: 22px;
+  height: 25px;
+  margin-right: 12px;
+}
+
+.list_content {
+  width: 100%;
+  position: absolute;
+  top: 11%;
+  left: 0;
+  height: calc( 100% - 11% - 314px );
+  overflow: hidden;
+  z-index: 2;
+}
+
+.scrollBox {
+  width: 100%;
+  height: calc( 100% - 64px );
+  overflow-y: scroll;
+}
+
+.immediatelyPayBtn {
+  background: #EB9600;
+  border-radius: 40px;
+  padding: 0 15px;
+  box-sizing: border-box;
+  float: right;
+}
+
+.consInfo {
+  width: 90%;
+  margin: 40px 5% 24px 5%;
+  background: #fff;
+  padding: 32px 30px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 0 8px 10px 0 rgba(43,92,139,0.06);
+}
+
+.userName {
+  display: flex;
+  justify-content: space-between;
+  font-size: 32px;
+}
+
+.ds_bill_change {
+  width: 31px;
+  height: 32px;
+}
+
+.consNum {
+  margin-top: 24px;
+  font-size: 28px;
+  color: #929292;
+}
+
+.address {
+  margin-top: 20px;
+  font-size: 28px;
+  color: #929292;
+}
+
+.billDetail {
+  width: 90%;
+  margin-left: 5%;
+  background: #fff;
+  border-radius: 10px;
+  padding: 25px 34px 50px;
+  box-sizing: border-box;
+}
+  
+.date {
+  width: 100%;
+  display: flex;
+  font-size: 28px;
+}
+
+.lastMonth {
+  margin-left: 88px;
+}
+
+.sameMonth {
+  margin-left: 69px;
+  color: #11A9B0;
+}
+
+.detail_box {
+  display: flex;
+  font-size: 24px;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.line {
+  width: 1px;
+  height: 100px;
+  background: #EDEDED;
+}
+
+.total_eleFees, .total_eleQuantity {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.total_eleFees_title, .total_eleQuantity_title {
+  color: #929292;
+  font-size: 24px;
+}
+
+.total_eleFees_amt, .total_eleQuantity_amt {
+  margin-top: 15px;
+  font-size: 46px;
+}
+
+.seeMore {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  color: #11A9B0;
+}
+
+.detailBillText {
+  font-size: 30px;
+}
+
+.ds_bill_select {
+  width: 22px;
+  height: 10px;
+  margin-left: 11px;
+}
+
+.quickJump {
+  width: 90%;
+  margin-left: 5%;
+  background: #fff;
+  border-radius: 10px;
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 56px 82px 57px 42px;
+  box-sizing: border-box;
+}
+
+.quickJump_box {
+  width: 50%;
+  height: 90px;
+  display: flex;
+  align-items: center;
+}
+
+.quickJump_text {
+  font-size: 28px;
+}
+
+.quickJump_box_right {
+  justify-content: center;
+}
+
+.quickJump_box_top {
+  margin-bottom: 46px;
+}
+
+
+.quickJump_img {
+  width: 90px;
+  height: 90px;
+  margin-right: 20px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 230px;
+}
+
+.ds_bill_buttonBg {
+  width: 100%;
+  height: 100%;
+}
+
+.GuidingLanguage {
+  position: fixed;
+  bottom: 49px;
+  width: 100%;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 28px;
+}
+
+.downLoad {
+  font-size: 32px;
+  letter-spacing: 12px;
+}
+
+.changeConsMatk {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background:rgba(0,0,0,.5) ;
+  z-index: 999;
+}
+
+.matkAll {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #F7F8FA;
+  border-radius: 8px 8px 0 0;
+}
+
+.mark_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 114px;
+  border-radius: 8px 8px 0 0;
+  background: #fff;
+}
+
+.ds_bill_close_changeList {
+  margin-left: 32px;
+  width: 32px;
+  height: 32px;
+}
+
+.changeNum {
+  font-size: 32px;
+  color: #333333;
+}
+
+.bindNum {
+  font-size: 24px;
+  color: #6A6A6A;
+  margin-left: 10px;
+}
+
+.mark_center {
+  width: 100%;
+  height: 484px;
+  padding: 32px 0 0 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.mark_consInfo {
+  width: 90%;
+  margin: 0 5% 20px 5%;
+  background: #fff;
+  padding: 32px 30px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 0 2px 20px 0 rgba(102,104,109,0.05);
+}
+
+.mark_userName {
+  display: flex;
+  justify-content: space-between;
+  font-size: 32px;
+}
+
+.ds_bill_right {
+  width: 13px;
+  height: 22px;
+}
+
+.mark_consNum {
+  margin-top: 30px;
+  font-size: 28px;
+  color: #929292;
+}
+
+.mark_address {
+  margin-top: 14px;
+  font-size: 28px;
+  color: #929292;
+}
+
+.mark_footer {
+  width: 100%;
+  text-align: center;
+  padding-top: 14px;
+  box-sizing: border-box;
+  color: #929292;
+  margin-bottom: 72px;
+  font-size: 28px;
+}
+

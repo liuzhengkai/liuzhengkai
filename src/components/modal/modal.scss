@@ -1,0 +1,121 @@
+/*遮罩层*/
+.modal_defaultWrap {
+  .modal-mask{
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 999;
+    height: 100vh;
+    width: 100%;
+  }
+  /*遮罩内容*/
+  .modal-content{
+    width: 80%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 30px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+  .modal-content-title{
+    margin: 0 20px;
+    font-size: 32px;
+    color: #333333;
+    text-align: center;
+  }
+  .content {
+    text-align: center;
+  }
+  .modal-content-text {
+    word-wrap: break-word;
+    color: #929292;
+    margin: 30px 22px;
+  }
+  /*底部按钮*/
+  .modal-footer{
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    line-height: 80px;
+    border-top: 2px solid #EDEDED;
+    margin-top: 30px;
+  }
+  .cancel-btn, .confirm-btn{
+    flex: 1;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+  }
+  .cancel-btn{
+    color: #000;
+    border-right: 2px solid #EDEDED;
+  }
+}
+
+.modal_careWrap {
+  .modal-mask{
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 999;
+    height: 100vh;
+    width: 100%;
+  }
+  /*遮罩内容*/
+  .modal-content{
+    width: 80%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 30px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+  .modal-content-title{
+    margin: 0 20px;
+    font-size: 44px;
+    color: #333333;
+    text-align: center;
+  }
+  .content {
+    text-align: center;
+  }
+  .modal-content-text {
+    word-wrap: break-word;
+    color: #929292;
+    margin: 0px 22px;
+    font-size: 40px;
+  }
+  /*底部按钮*/
+  .modal-footer{
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    line-height: 80px;
+    border-top: 2px solid #EDEDED;
+    margin-top: 30px;
+  }
+  .cancel-btn, .confirm-btn{
+    flex: 1;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    font-size: 44px;
+  }
+  .cancel-btn{
+    color: #000;
+    border-right: 2px solid #EDEDED;
+  }
+}
+  

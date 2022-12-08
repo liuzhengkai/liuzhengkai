@@ -1,0 +1,1934 @@
+// //普通版样式
+// .defaultWrap{
+//   width: 100%;
+//   height: 100%;
+//   .header_bg {
+//     width: 100%;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     z-index: 0;
+//   }
+
+//   .info {
+//     color: #333333;
+//     flex: 2;
+//     text-align: right;
+//   }
+//   .info2 {
+//     font-weight: 600;
+//     font-size: 36px;
+//   }
+//   .info3 {
+//     color: #929292;
+//     font-size: 24px;
+//   }
+
+//   .POWER_USER_NAME, .POWER_USER_ADDR, .POWER_COMPANY_NM, .arrears, .accountBalance, .TOTAL_PAY_BREACH, .LAST_CHARGE_DATE, .LAST_BUY_ADDR, .ADD_AMT, .DED_AMT, .DEADLINE_TIME{
+//     display: flex;
+//     justify-content: space-between;
+//     color: #929292;
+//     font-size: 28px;
+//     margin-bottom: 20px;
+//     text-align: right;
+//   }
+
+//   .Arrears_color {
+//     color: #DA392C;
+//   }
+
+//   .Arrears, .BALANCE{
+//     display: flex;
+//     justify-content: space-between;
+//     color: #929292;
+//     font-size: 28px;
+//     text-align: right;
+//   }
+
+//   .BALANCE, .TOTAL_PAY_BREACH {
+//     margin-top: 20px;
+//   }
+
+//   .accountBalance {
+//     margin-top: 20px;
+//   }
+
+//   .shrink {
+//     flex-shrink: 0;
+//     flex: 1;
+//     text-align: left;
+//   }
+
+//   .arrears {
+//     color: #DA392C;
+//   }
+
+//   .line {
+//     width: 100%;
+//     height: 2px;
+//     background: #EDEDED;
+//   }
+
+//   .upArrow, .downArrow {
+//     width: 28px;
+//     height: 14px;
+//     transform: translateY(-2px);
+//     margin-left: 16px;
+//   }
+
+//   .REPAIR_LADDER_AMT, .REPAIR_LADDER_MONTH, .REPAIR_PRESET_AMT, .REPAIR_URGENT_AMT, .REPAIR_REFUND_AMT, .REPAIR_EXCEED_AMT, .REPAIR_EXCEED_MONTH, .PENALTY_AMT {
+//     color: #929292;
+//     font-size: 24px;
+//     margin-bottom: 12px;
+//     text-align: right;
+//   }
+
+
+//   /* ----------------------------------------------------------------lzk-结束-------------------------------------------------------------------- */
+
+//   .page{
+//     width: 100%;
+//     height: 100%;
+//     background-color: #F7F8FA;
+//   }
+//   .TitleBar_H5 {
+//     margin-top: 88px;
+//   }
+
+//   .TitleBar_Alipay {
+//     margin-top: 0px;
+//     display: flex;
+//     flex-direction: column;
+//     width: 100%;
+//     height: calc(100vh - 320px);
+//     padding-bottom: 150px;
+//     position: absolute;
+//     overflow-y: scroll;
+//     overflow-x: hidden;
+//   }
+//   .page-view{
+//     display: flex;
+//     flex-direction: column;
+//     width: 100%;
+//     position: absolute;
+//     overflow-y: scroll;
+//     overflow-x: hidden;
+//   }
+
+//   .page-view-card{
+//     z-index: 3;
+//     margin: 0 30px 20px 29px;
+//     display: flex;
+//     flex-direction: column;
+//     // .page-view-cardBox {
+//       border-radius: 10px;
+//       overflow: hidden;
+//     // }
+//     .tips_goELe{
+//       width: 100%;
+//       background: #FFF6E7;
+//       color: #D07C4E;
+//       display: flex;
+//       justify-content: space-between;
+//       padding: 20px 30px;
+//       box-sizing: border-box;
+//       margin: 0;
+//       font-size: 30px;
+//       position: relative;
+//       .tips_goELe_left {
+//         display: flex;
+//       }
+//       .tips_text {
+//         display: flex;
+//         align-items: center;
+//         padding: 0 10px;
+//         font-size: 24px;
+//         box-sizing: border-box;
+//       }
+//       .img_center {
+//         display: flex;
+//         align-items: center;
+//         .tips_logo {
+//           width: 22px;
+//           height: 26px;
+//         }
+//         .tips_back {
+//           width: 10.1px;
+//           height: 18.3px;
+//         }
+//       }
+//     }
+//   }
+
+//   .infoBox {
+//     background: #fff;
+//     padding: 40px 30px 46px;
+//     box-sizing: border-box;
+//   }
+
+//   .page-title{
+//     width: 100%;
+//     color: white;
+//     position: absolute;
+//     height: 34px;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     text-align: center;
+//     font-size: 40px;
+//     z-index: 2;
+//   }
+//   .title-bgImg{
+//     width: 100%;
+//     position: absolute;
+//     z-index: 1;
+//   }
+//   .page-view-pay{
+//     margin: 0 30px 120px 30px;
+//     padding: 30px 30px 30px 30px;
+//     background: #FFFFFF;
+//     border-radius: 15px;
+//     z-index: 2;
+//   }
+//   .pay-money-title{
+//     width: 100%;
+//     font-size: 30px;
+//     color: #333333;
+//     letter-spacing: 0;
+//   }
+//   .checked-list{
+//     display: flex;
+//     justify-content: space-between;
+//     margin-top: 24px;
+//   }
+//   .checked-block{
+//     width: 23%;
+//     height: 80px;
+//     display: flex;
+//     font-size: 32px;
+//     justify-content: center;
+//     align-items: center;
+//     text-align: center;
+//     background: #FFFFFF;
+//     border: 1px solid #CCCCCC;
+//     border-radius: 6px;
+//     position: relative;
+//   }
+
+//   .noCoupon {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     background: #F7F8FA;
+//     height:700px;
+//     justify-content:center;
+//     .noCouponImg {
+//       width: 200px;
+//       height: 200px;
+//       margin-top: 50px;
+//       margin-bottom: 50px;
+//     }
+//     .noCouponText {
+//       padding: 30px 0 100px 0;
+//       color: #929292;
+//     }
+//   }
+
+//   .checked-view{
+//     border: 1px solid #0C82F1!important;
+//   }
+//   .checked-view-el{
+//     border: 20px solid #0C82F1;
+//     border-right: 20px solid transparent;
+//     border-bottom: 20px solid transparent;
+//     border-top-left-radius: 5px;
+//     content: "";
+//     position: absolute;
+//     width: 0;
+//     left: 0;
+//     top: 0;
+//   }
+//   .checked-view-el-image {
+//     position: absolute;
+//     height: 17px;
+//     width: 17px;
+//     left: -17px;
+//     top: -18px;
+//   }
+//   .pay-money-input{
+//     height: 96px;
+//     margin-top: 30px;
+//     background: #FFFFFF;
+
+//   }
+//   .lf_label {
+//     display: flex;
+//     flex-wrap: wrap;
+//   }
+//   .lf_label_item {
+//     background: #FEEAEE;
+//     border-radius: 4px;
+//     font-size: 24px;
+//     color: #DA392C;
+//     letter-spacing: 0;
+//     margin-right: 20px;
+//     margin-top: 20px;
+//     padding: 6px;
+//   }
+//   .pay-money-input {
+//     display: flex;
+//     align-items: center;
+//   }
+//   .pay-money-input .pay-money-input-view{
+//     position: absolute;
+//     z-index: 999;
+//     margin: auto;
+//     height: 94px;
+//     width: 85px;
+//     font-size: 34px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     font-weight: 600;
+//   }
+
+
+//   .pay-money-input-input{
+//     width: 630px;
+//     height: 96px;
+//     border: 1px solid #CCCCCC;
+//     border-radius: 10px;
+//     font-weight: 600;
+//     font-size: 32px;
+//     .van-field__control { /*输入框*/
+//       height: 95px;
+//     }
+//     .van-field__control::placeholder {
+//       color: #929292;
+//     }
+//     .placeholder-class {
+//       color: #929292;
+//     }
+//   }
+//   .input-view{
+//     // padding: 0px 0px 0px 68px;
+//     padding-left:68px;
+//     box-sizing: border-box;
+//   }
+//   .money-input-focus{
+//     border: 1px solid #0C82F1!important;
+//   }
+//   .page-item{
+//     height: 50px;
+//     margin-top: 40px;
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//   }
+//   .page-item-left,.page-item-right{
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//   }
+
+//   .page-item-red .page-item-left{
+//     flex:0.9;
+//     justify-content: flex-start;
+//   }
+//   .page-item-red .page-item-right{
+//     flex:1.1;
+//     justify-content: flex-end;
+//   }
+
+//   .use_default{
+//     border: 1px solid red;
+//     padding: 1px;
+//   }
+//   .page-item-right{
+//     font-size: 29px;
+//     .van-cell {
+//       background-color: rgba(0,0,0,0);
+//     }
+//     .van-field__control {
+//       text-align: right;
+//     }
+//   }
+//   .page-item-left-explain{
+//     font-size: 24px;
+//     color: #6A6A6A;
+//     letter-spacing: 0;
+//     line-height: 28px;
+//     margin-left: 10px;
+//   }
+//   .page-item-left > image{
+//     width: 35px;
+//     height: 35px;
+//     margin-right:10px;
+//   }
+//   .page-item-right > view {
+//     margin-left:10px;
+//   }
+//   .page-item-right > image{
+//     width: 15px;
+//     height: 28px;
+//   }
+//   .disabled-block{
+//     background: #F1F3F5;
+//     color: #BDC4CA;
+//     border: 0px;
+//   }
+//   .page-card-bottom{
+//     margin-top: 20px;
+//     border-top: 1px solid rgb(235, 236, 239);
+//     display: flex;
+//     align-items: center;
+//     justify-content: flex-end;
+//     color:#929292;
+//   }
+//   .page-card-bottom-view {
+//     padding: 20px 0px 0px 20px;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     .page-card-bottom-image {
+//       width: 30px;
+//       height: 30px;
+//     }
+//     .page-card-bottom-gdk {
+//       margin-left: 10px;
+//       font-size: 28px;
+//     }
+//     .page-card-bottom-rmb {
+//       font-size: 32px;
+//     }
+//   }
+//   .page-card-tips{
+//     margin-top: 12px;
+//     text-align: right;
+//     font-size: 23px;
+//     color: #D07C4E;
+//   }
+
+//   .backDiscount {
+//     width: 100%;
+//     padding: 20px 32px;
+//     box-sizing: border-box;
+//     position: fixed;
+//     bottom: 138px;
+//     left:0;
+//     z-index: 999;
+//     background: #FFF6E7;
+//     font-size: 24px;
+//     // display: flex;
+//     // justify-content: space-between;
+//   }
+
+//   .ds_xdRight {
+//     width: 10px;
+//     height: 16px;
+//     margin-left: 10px;
+//   }
+
+//   .backDetail {
+//     // margin-left: 5px;
+//     color: #0C82F1;
+//     // flex-shrink: 0;
+//     display: flex;
+//     align-items: center;
+//     //=======================
+//     float: right;
+//     width: 120px;
+//   }
+
+//   .rich_div_class {
+//     color: #D07C4E;
+//     letter-spacing: 0;
+//     overflow: hidden;
+//     text-overflow:ellipsis;
+//     white-space: nowrap;
+//     font-size: 25px;
+//     float: left;
+//     width: 560px;
+//   }
+//   .rich_span_class {
+//     color: #DA392C;
+//   }
+
+//   .diffColor {
+//     display: inline-block;
+//     color: #DA392C;
+//   }
+
+//   .discountDetailMatk {
+//     width: 100%;
+//     height: 100%;
+//     position: fixed;
+//     bottom: 0;
+//     left: 0;
+//     background:rgba(0,0,0,.5) ;
+//     z-index: 999;
+//   }
+  
+//   .matkAll_d {
+//     position: fixed;
+//     bottom: 0;
+//     left: 0;
+//     width: 100%;
+//     background: #F7F8FA;
+//     border-radius: 8px 8px 0 0;
+//   }
+
+//   .mark_d_titleBox {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     width: 100%;
+//     height: 114px;
+//     border-radius: 8px 8px 0 0;
+//     background: #fff;
+//   }
+
+//   .mark_d_close {
+//     margin-left: 32px;
+//     width: 32px;
+//     height: 32px;
+//   }
+
+//   .mark_d_title {
+//     font-size: 32px;
+//     color: #333333;
+//     letter-spacing: 0;
+//   }
+
+//   .mark_d_center {
+//     height: 35vh;
+//     background: #fff;
+//     overflow: hidden;
+//     overflow-y: auto;
+//   }
+
+//   .mark_d_item {
+//     border-top: solid 1px #EBEBEB;
+//     padding: 30px 0;
+//     box-sizing: border-box;
+//   }
+
+//   .mark_d_addressBox {
+//     display: flex;
+//     align-items: center;
+//     margin: 19px 0 13px 0;
+//   }
+
+//   .ds_xdLeft {
+//     margin-right: 22px;
+//     width: 8px;
+//     height: 28px;
+//   }
+
+//   .mark_d_address {
+//     font-size: 28px;
+//     color: #333333;
+//     letter-spacing: 0;
+//   }
+
+//   .mark_d_name {
+//     display: inline-block;
+//     font-size: 24px;
+//     color: #DA392C;
+//     background: #FEEAEE;
+//     padding: 6px;
+//     letter-spacing: 0;
+//     border-radius: 4px;
+//     margin-left: 30px;
+//   }
+
+//   .mark_d_content {
+//     font-size: 24px;
+//     color: #333333;
+//     letter-spacing: 0;
+//     padding: 15px 0 30px;
+//     box-sizing: border-box;
+//     margin: 0 30px;
+//   }
+
+//   .mark_d_join {
+//     font-size: 24px;
+//     color: #929292;
+//     letter-spacing: 0;
+//     line-height: 26px;
+//     margin-left: 30px;
+//   }
+
+//   .mark_d_footer {
+//     width: 100%;
+//     background: #FFFAF4;
+//     font-size: 24px;
+//     color: #D07C4E;
+//     letter-spacing: 0;
+//     padding: 10px 0 40px 30px;
+//     box-sizing: border-box;
+//     display: flex;
+//     align-items: center;
+//   }
+
+//   .ds_xdTips {
+//     width: 30px;
+//     height: 30px;
+//     margin-right: 10px;
+//   }
+
+//   .page-footer{
+//     width: 100%;
+//     padding: 20px 0;
+//     position: fixed;
+//     bottom: 0;
+//     left:0;
+//     z-index: 999;
+//     background-color: #FFFFFF;
+//   }
+//   .page-footer-content{
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     background: #FFF6E7;
+//     padding: 20px 32px;
+//     font-size: 26px;
+//   }
+//   .page-footer-content .left{
+//     color: #D07C4E;
+//     display: flex;
+//   }
+//   .page-footer-content .right{
+//     color: #0C82F1;
+//   }
+//   .lf-layout{
+//     display:flex;/*内联对象需加*/
+//     letter-spacing: 1px;  /*字间距*/
+//     width:18em;/*指定宽度*/
+//     word-break:keep-all;/* 不换行 */
+//     white-space:nowrap;/* 强制在同一行内显示所有文本,直到文本结束或者遭遇 br 对象。不换行 */
+//     overflow:hidden;/* 内容超出宽度时隐藏超出部分的内容 */
+//     text-overflow:ellipsis;
+//   }
+//   .page-footer-row{
+//     height: 98px;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//   }
+//   .page-footer-left {
+//     margin: 0 0 0 30px;
+//     display: flex;
+//     align-items: flex-end;
+//     margin-top: -15px;
+//     font-size: 30px;
+//   }
+//   .foot-btn{
+//     border-radius: 44px;
+//     color:white;
+//     padding: 17px 40px;
+//     margin: 0 30px 0 0;
+//     font-size: 32px;
+//   }
+//   .not-click-btn{
+//     background:  #5DB2FF!important;
+//   }
+//   .click-btn{
+//     background: #0C82F1;
+//   }
+//   .proportion-tips{
+//     background: #FFF6E7;
+//     color: #D07C4E;
+//     position: relative;
+//     width: calc(100% + 60px);
+//     margin: 30px 0px;
+//     padding: 14px 0px 14px 30px;
+//     left: -30px;
+//     font-size: 26px;
+//     box-sizing:border-box;
+//   }
+//   .proportion-tips-image{
+//     width: 30px;
+//     height: 34px;
+//     position: relative;
+//     top: 7px;
+//   }
+//   .lf-label{
+//     display: flex;
+//     flex-wrap: wrap;
+//     font-size: 28px;
+//   }
+//   // .lf-label view{
+//   //   color: #DA392C;
+//   //   background: #FEEAEE;
+//   //   padding: 0 21px;
+//   //   border-radius: 4px;
+//   //   margin-right: 21px;
+//   //   margin-top: 13px;
+//   // }
+//   // .span{
+//   //   color: #DA392C;
+//   // }
+
+
+//   // --------------------------------------------------------------------------------------------------输入金额
+//   .page-view-money {
+//     background: #FFFFFF;
+//     border-radius: 10px 10px 0px 0px;
+//   }
+
+//   //
+
+//   // .payElectricityCharges-picker {
+//   //   position:relative;
+//   //   // bottom: 0;
+//   //   // left:0;
+//   //   // right:0;
+//   //   z-index: 9999;
+//   // }
+
+
+// //--优惠券弹窗
+//   .picker_view_box {
+//     width: 100%;
+//     height: 100%;
+//     background: rgba(0,0,0,0.5);
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     z-index: 999;
+//   }
+
+//   .picker_view {
+//     background: #fff;
+//     position: fixed;
+//     bottom: 0;
+//     left:0;
+//     right:0;
+//     z-index: 999;
+//   }
+
+//   .picker_view_title {
+//     display: flex;
+//     justify-content: space-between;
+//     height: 112px;
+//     line-height: 112px;
+//     padding: 0 5%;
+//     box-sizing: border-box;
+//   }
+
+//   .close {
+//       width: 200px;
+//       font-size: 50px;
+//   }
+
+//   .no {
+//       width: 200px;
+//       text-align: right;
+//   }
+
+//   .tapChange {
+//     display: flex;
+//     width: 100%;
+//     height: 80px;
+//     line-height: 80px;
+//     justify-content: space-around;
+//     font-size: 28px;
+//   }
+//   .tapChange_blue {
+//     color: #333333;
+//     position: relative;
+//   }
+//   .tapChange_blue::after {
+//     content:'';
+//     width: 80px;
+//     height:4px;
+//     position: absolute;
+//     z-index: 999;
+//     bottom: 10px;
+//     left: 50px;
+//     background-image: linear-gradient(-45deg, #0C82F1 0%, #5DB2FF 100%);
+//     border-radius: 2px
+//   }
+
+//   .active {
+//     color: #333333;
+//   }
+
+//   .deductionBox {
+//     font-size: 24px;
+//     color: #333333;
+//     display: flex;
+//     padding: 20px 5%;
+//     box-sizing: border-box;
+//     border-top: solid 1px #EDEDED;
+//     height:90px;
+//     line-height: 50px;
+//   }
+
+//   .deductionMoney {
+//     font-size: 24px;
+//     color: red;
+//     margin-left: 5px;
+//   }
+
+//   .use-recommend-coupon {
+//     position: absolute;
+//     right: 30px;
+//     box-sizing: border-box;
+//     padding: 5px 15px;
+//     text-align: center;
+//     color: white;
+//     background-color: #ec808d;
+//     border-radius: 10px;
+//   }
+
+//   .couponList {
+//     box-sizing: border-box;
+//     width: 100%;
+//     // height: 400px;
+//     height:700px;
+//     background: #F7F8FA;
+//     overflow: hidden;
+//     overflow-y: scroll;
+//     padding: 30px;
+//   }
+//   .couponListShort {
+//     height:610px;
+//     padding-bottom: 270px;
+//   }
+//   .couponItem {
+//     box-sizing: border-box;
+//     height:200px;
+//     background: url('../../images/ds_couponBg.png') no-repeat;
+//     background-size: 100% 100%;
+//     display:flex;
+//     align-items: center;
+//   }
+//   .couponItem_gray {
+//     box-sizing: border-box;
+//     height:200px;
+//     background: url('../../images/ds_couponBg_gray.png') no-repeat;
+//     background-size: 100% 100%;
+//     display:flex;
+//     align-items: center;
+//   }
+
+//   .btn_box {
+//     width: 100%;
+//     padding: 40px 0px;
+//     box-sizing: border-box;
+//     background: #fff;
+//     display: flex;
+//     align-items: center;
+//     position:fixed;
+//     bottom: 0;
+//     left: 0;
+//     right: 0;
+//   }
+
+//   .btn {
+//     width: 90%!important;
+//     height: 100px;
+//     line-height: 100px;
+//     margin-left: 5%;
+//     background-image: linear-gradient(-45deg, #0C82F1 0%, #5DB2FF 100%);
+//     color: #fff;
+//     font-weight: normal;
+//     font-size: 32px;
+//   }
+//   .picker_view_box .couponItem-left {
+//       width: 29%;
+//       height: 200px;
+//       // background-image: linear-gradient(131deg, rgb(150,176,234) 0%, rgb(64,142,230) 100%);
+//       display: flex;
+//       align-items: center;
+//       justify-content: center;
+//       flex-direction: column;
+//       font-size: 26px;
+//       color: #FFFFFF;
+//   }
+
+//   .picker_view_box .couponItem-right {
+//       width: 64.8%;
+//       font-size: 22px;
+//       color: #333333;
+//       letter-spacing: 0;
+//       line-height: 22px;
+//       flex: 1;
+//       padding: 20px;
+//       position: relative;
+//       height: 200px;
+//       box-sizing: border-box;
+//       display: flex;
+
+//       .couponItem-right-l {
+//         display: flex;
+//         flex-direction: column;
+//         font-size: 22px;
+//         margin-left:5%;
+//         width: 80%;
+//         .right-title {
+//           height: 56px;
+//           box-sizing: content-box;
+//           padding-bottom: 15px;
+//           display: flex;
+//           flex-direction: column;
+//           justify-content: center;
+//           overflow-y: visible;
+//           .right-title-text {
+//           font-size: 28px;
+//           line-height: 36px;
+//           word-wrap: break-word;
+//           }
+//         }
+//         .right-time {
+//           font-size: 22px;
+//           word-break: keep-all;
+//           white-space:nowrap;
+//         }
+
+//         .right-time-describe {
+//           font-size: 22px;
+//           margin-top:15px;
+//           word-break: keep-all;
+//         }
+//       }
+//       .couponItem-right-r {
+//         margin: auto;
+//         .couponItem-right-r-checked,
+//         .couponItem-right-r-nochecked{
+//           width: 36px;
+//           height: 36px;
+//           left: -20px;
+//           top: -5px;
+//         }
+//       }
+//       .page-section-demo {
+//         position: absolute;
+//         right: 30px;
+//         top: 75px;
+//       }
+//       .right-overly {
+//         width: 96px;
+//         height:65px;
+//         position: absolute;
+//         right: 5px;
+//         top: 0px;
+//       }
+
+//   }
+// }
+
+
+// // 关怀版样式
+// .careWrap {
+//   width: 100%;
+//   height: 100vh;
+//   background-color: #F7F8FA;
+//   top: 0;
+//   left: 0;
+//   .header_bg {
+//     width: 100%;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     z-index: 0;
+//   }
+
+//   .info {
+//     color: #333333;
+//     flex: 2;
+//     text-align: right;
+//   }
+//   .info2 {
+//     font-weight: 600;
+//     font-size: 80px;
+//   }
+//   .info3 {
+//     color: #929292;
+//     font-size: 40px;
+//   }
+//   .info4 {
+//     font-weight: 600;
+//     font-size: 80px;
+//   }
+
+//   .POWER_USER_NAME, .POWER_USER_ADDR, .POWER_COMPANY_NM, .arrears, .accountBalance, .TOTAL_PAY_BREACH, .LAST_CHARGE_DATE, .LAST_BUY_ADDR, .ADD_AMT, .DED_AMT, .DEADLINE_TIME{
+//     display: flex;
+//     justify-content: space-between;
+//     color: gray;
+//     font-size: 40px;
+//     margin-bottom: 20px;
+//     text-align: right;
+//   }
+
+//   .Arrears_color {
+//     color: #DA392C;
+//   }
+
+//   .Arrears, .BALANCE{
+//     display: flex;
+//     justify-content: space-between;
+//     color: #929292;
+//     font-size: 50px;
+//     text-align: right;
+//   }
+
+//   .BALANCE, .TOTAL_PAY_BREACH {
+//     margin-top: 20px;
+//   }
+
+//   .accountBalance {
+//     margin-top: 20px;
+//   }
+
+//   .shrink {
+//     flex-shrink: 0;
+//     flex: 0.9;
+//     text-align: left;
+//     font-size: 35px;
+//   }
+//   .shrink2 {
+//     flex: 1.5;
+//   }
+
+//   .arrears {
+//     color: #DA392C;
+//   }
+
+//   .line {
+//     width: 100%;
+//     height: 2px;
+//     background: #EDEDED;
+//   }
+
+//   .upArrow, .downArrow {
+//     width: 28px;
+//     height: 14px;
+//     transform: translateY(-2px);
+//     margin-left: 16px;
+//   }
+
+//   .REPAIR_LADDER_AMT, .REPAIR_LADDER_MONTH, .REPAIR_PRESET_AMT, .REPAIR_URGENT_AMT, .REPAIR_REFUND_AMT, .REPAIR_EXCEED_AMT, .REPAIR_EXCEED_MONTH, .PENALTY_AMT {
+//     color: #929292;
+//     font-size: 40px;
+//     margin-bottom: 12px;
+//     text-align: right;
+//   }
+
+
+//   /* ----------------------------------------------------------------lzk-结束-------------------------------------------------------------------- */
+
+
+
+//   .page{
+//     width: 100%;
+//     height: 100%;
+//     overflow: hidden;
+//   }
+//   .TitleBar_Alipay{
+//     display: flex;
+//     flex-direction: column;
+//     width: 100%;
+//     height: calc(100vh - 420px);
+//     padding-bottom: 195px;
+//     position: absolute;
+//     overflow-y: scroll;
+//     overflow-x: hidden;
+//   }
+//   .TitleBar_H5 {
+//     // display: flex;
+//     // flex-direction: column;
+//     width: 100%;
+//     height: calc(100vh - 410px);
+//     padding-bottom: 195px;
+//     position: relative;
+//     // overflow-y: scroll;
+//     overflow-x: hidden;
+//     // margin-top: 150px;
+//   }
+//   .TitleBar_H5_lf {
+//     height: calc(100vh - 670px);
+//   }
+
+//   .page-view-card{
+//     z-index: 3;
+//     margin: 0 30px 20px 29px;
+//     display: flex;
+//     flex-direction: column;
+
+//     border-radius: 10px;
+//     overflow: hidden;
+
+//     .infoBox {
+//       background: #fff;
+//       padding: 40px 30px 46px;
+//       box-sizing: border-box;
+//     }
+//     .tips_goELe{
+//       width: 100%;
+//       background: #FFF6E7;
+//       color: #D07C4E;
+//       display: flex;
+//       justify-content: space-between;
+//       padding: 20px 30px;
+//       box-sizing: border-box;
+//       margin: 0;
+//       font-size: 30px;
+//       // position: relative;
+//       .tips_goELe_left {
+//         display: flex;
+//       }
+//       .tips_text {
+//         display: flex;
+//         align-items: center;
+//         padding: 0 10px;
+//         font-size: 32px;
+//         box-sizing: border-box;
+//       }
+//       .img_center {
+//         display: flex;
+//         align-items: center;
+//         .tips_logo {
+//           width: 26px;
+//           height: 32px;
+//         }
+//         .tips_back {
+//           width: 18px;
+//           height: 32px;
+//         }
+//       }
+//     }
+//   }
+
+//   .page-view-pay{
+//     margin: 0 30px 10px 30px;
+//     padding: 30px;
+//     background: #FFFFFF;
+//     border-radius: 15px;
+//     z-index: 2;
+//     .pay-money-title{
+//       width: 100%;
+//       font-size: 40px;
+//       color: #333333;
+//       letter-spacing: 0;
+//     }
+//     .checked-list{
+//       display: flex;
+//       justify-content: space-between;
+//       margin-top: 24px;
+//       .checked-block{
+//         width: 23%;
+//         height: 92px;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         text-align: center;
+//         background: #FFFFFF;
+//         border: 1px solid #CCCCCC;
+//         border-radius: 6px;
+//         position: relative;
+//         font-size: 44px;
+//       }
+//     }
+//   }
+
+//   .noCoupon {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     background: #F7F8FA;
+//     height:700px;
+//     justify-content:center;
+//     .noCouponImg {
+//       width: 200px;
+//       height: 200px;
+//       margin-top: 50px;
+//       margin-bottom: 50px;
+//     }
+//     .noCouponText {
+//       padding: 30px 0 100px 0;
+//       color: #929292;
+//     }
+//   }
+
+//   .checked-view{
+//     border: 1px solid #0C82F1!important;
+//   }
+//   .checked-view-el{
+//     border: 20px solid #0C82F1;
+//     border-right: 20px solid transparent;
+//     border-bottom: 20px solid transparent;
+//     border-top-left-radius: 5px;
+//     content: "";
+//     position: absolute;
+//     width: 0;
+//     left: 0;
+//     top: 0;
+//   }
+//   .checked-view-green{
+//     border: 1px solid #45D9C9!important;
+//   }
+//   .checked-view-el-green{
+//     border: 20px solid #45D9C9;
+//     border-right: 20px solid transparent;
+//     border-bottom: 20px solid transparent;
+//     border-top-left-radius: 5px;
+//     content: "";
+//     position: absolute;
+//     width: 0;
+//     left: 0;
+//     top: 0;
+//   }
+//   .checked-view-el-image {
+//     position: absolute;
+//     height: 17px;
+//     width: 17px;
+//     left: -17px;
+//     top: -18px;
+//   }
+//   .pay-money-input{
+//     height: 96px;
+//     margin-top: 30px;
+//     background: #FFFFFF;
+
+//   }
+//   .lf_label {
+//     display: flex;
+//     flex-wrap: wrap;
+//   }
+//   .lf_label_item {
+//     background: #FEEAEE;
+//     border-radius: 4px;
+//     font-size: 24px;
+//     color: #DA392C;
+//     letter-spacing: 0;
+//     margin-right: 20px;
+//     margin-top: 20px;
+//     padding: 6px;
+//   }
+//   .pay-money-input .pay-money-input-view{
+//     position: absolute;
+//     z-index: 999;
+//     margin: auto;
+//     height: 94px;
+//     width: 85px;
+//     font-size: 40px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     font-weight: 600;
+
+//   }
+//   .pay-money-input-input{
+//     height: 96px;
+//     border: 1px solid #CCCCCC;
+//     border-radius: 10px;
+//     font-weight: 600;
+//     .van-field__control { /*输入框*/
+//       height: 95px;
+//       font-size: 40px;
+//     }
+//     .van-field__control::placeholder {
+//       color: #929292;
+//       font-weight: 500;
+//     }
+//   }
+//   .input-view{
+//     padding: 0px 0px 0px 68px;
+//     box-sizing: border-box;
+//   }
+//   .money-input-focus{
+//     border: 1px solid #0C82F1!important;
+//   }
+
+//   .money-input-focus-green{
+//     border: 1px solid #45D9C9!important;
+//   }
+
+//   .pay-money-input .weui-input {
+//       height: 95px;
+//   }
+//   .pay-money-input .weui-input::placeholder {
+//     font-weight: 500;
+//   }
+
+//   .page-item{
+//     height: 80px;
+//     margin-top: 40px;
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//     padding-bottom:20px;
+//   }
+//   .page-item-left,
+//   .page-item-right{
+//     display: flex;
+//     flex-shrink:0;
+//     align-items: center;
+//     // justify-content: center;
+//     font-size:36px;
+//   }
+//   .page-item-left {
+//     position:relative;
+//     width:200px;
+//   }
+//   .page-item-right {
+//     .page-item-right-usenum{
+//       font-size: 34px;
+//     }
+//   }
+//   .page-item-left-cou-img {
+//     width: 35px;
+//     height: 35px;
+//     margin-right: 10px;
+//   }
+//   .page-item-left-cou-img2 {
+//     width: 13px;
+//     height: 22px;
+//   }
+//   .page-item-red .page-item-left{
+//     flex:1;
+//     justify-content: flex-start;
+//   }
+//   .page-item-red .page-item-right{
+//     flex:2.8;
+//     justify-content: flex-end;
+
+//   }
+
+//   .use_default{
+//     border: 1px solid red;
+//     padding: 1px;
+//   }
+//   .page-item-right{
+//     font-size: 29px;
+//     overflow: hidden;
+//     .van-cell {
+//       background-color: rgba(0,0,0,0);
+//       padding: 0px;
+//     }
+//     .van-field__control {
+//       text-align: right;
+//       font-size: 34px;
+//     }
+//     .van-field__control::placeholder{
+//       border: 0;
+//       font-size: 32px;
+//       line-height:32px;
+//     }
+//   }
+//   .page-item-left-explain{
+//     display:block;
+//     position:absolute;
+//     bottom:-30px;
+//     left: 0;
+//     width:500px;
+//     height: 28px;
+//     line-height: 28px;
+//     font-size: 28px;
+//     color: #6A6A6A;
+//     word-break:keep-all;
+//   }
+//   .recommend-coupon-tag {
+//     color: #f5222d;
+//   }
+//   .page-item-left-image{
+//     width: 35px;
+//     height: 35px;
+//     margin-right:10px;
+//   }
+//   .page-item-right-view {
+//     // margin-right:-2px;
+//     font-size: 34px;
+//   }
+//   .page-item-right-image{
+//     width: 13px;
+//     height: 22px;
+//   }
+//   .disabled-block{
+//     background: #F1F3F5;
+//     color: #BDC4CA;
+//     border: 0px;
+//   }
+//   .page-card-bottom{
+//     margin-top: 30px;
+//     border-top: 1px solid rgb(235, 236, 239);
+//     display: flex;
+//     align-items: center;
+//     justify-content: flex-end;
+//     color:#929292;
+//     font-size: 28px;
+//   }
+//   .page-card-bottom-view {
+//     padding: 20px 0px 0px 20px;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     .page-card-bottom-image {
+//       width: 35px;
+//       height: 35px;
+//     }
+//     .page-card-bottom-gdk {
+//       margin-left: 10px;
+//       font-size: 34px;
+//     }
+//     .page-card-bottom-rmb {
+//       font-size: 36px;
+//     }
+//   }
+
+//   .page-card-tips{
+//     margin-top: 12px;
+//     text-align: right;
+//     font-size: 23px;
+//     color: #D07C4E;
+//   }
+
+//   .backDiscount {
+//     width: 100%;
+//     padding: 20px 32px;
+//     box-sizing: border-box;
+//     position: fixed;
+//     bottom: 240px;
+//     left:0;
+//     z-index: 999;
+//     background: #FFF6E7;
+//     font-size: 24px;
+//     display: flex;
+//     justify-content: space-between;
+//   }
+
+//   .ds_xdRight {
+//     width: 10px;
+//     height: 16px;
+//     margin-left: 10px;
+//   }
+
+//   .backContent {
+//     color: #D07C4E;
+//     letter-spacing: 0;
+//     overflow: hidden;
+//     text-overflow:ellipsis;
+//     white-space: nowrap;
+//     float: left;
+//     width: 560px;
+//   }
+
+//   .backDetail {
+//     // margin-left: 5px;
+//     color: #0C82F1;
+//     // flex-shrink: 0;
+//     display: flex;
+//     align-items: center;
+//     float: right;
+//     width: 120px;
+//   }
+
+//   .diffColor {
+//     display: inline-block;
+//     color: #DA392C;
+//   }
+
+//   .discountDetailMatk {
+//     width: 100%;
+//     height: 100%;
+//     position: fixed;
+//     bottom: 0;
+//     left: 0;
+//     background:rgba(0,0,0,.5) ;
+//     z-index: 999;
+//   }
+  
+//   .matkAll_d {
+//     position: fixed;
+//     bottom: 0;
+//     left: 0;
+//     width: 100%;
+//     background: #F7F8FA;
+//     border-radius: 8px 8px 0 0;
+//   }
+
+//   .mark_d_titleBox {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     width: 100%;
+//     height: 114px;
+//     border-radius: 8px 8px 0 0;
+//     background: #fff;
+//     border-bottom: solid 1px #DCDCDC;
+//   }
+
+//   .mark_d_close {
+//     margin-left: 32px;
+//     width: 32px;
+//     height: 32px;
+//   }
+
+//   .mark_d_title {
+//     font-size: 32px;
+//     color: #333333;
+//     letter-spacing: 0;
+//   }
+
+//   .mark_d_center {
+//     height: 35vh;
+//     background: #fff;
+//     overflow: hidden;
+//     overflow-y: auto;
+//   }
+
+//   .mark_d_item {
+//     border-top: solid 1px #EBEBEB;
+//     padding: 30px 0;
+//     box-sizing: border-box;
+//   }
+
+//   .mark_d_addressBox {
+//     display: flex;
+//     align-items: center;
+//     margin: 0 0 13px 0;
+//   }
+
+//   .ds_xdLeft {
+//     margin-right: 22px;
+//     width: 8px;
+//     height: 28px;
+//   }
+
+//   .mark_d_address {
+//     font-size: 28px;
+//     color: #333333;
+//     letter-spacing: 0;
+//   }
+
+//   .mark_d_name {
+//     display: inline-block;
+//     font-size: 24px;
+//     color: #DA392C;
+//     background: #FEEAEE;
+//     padding: 6px;
+//     letter-spacing: 0;
+//     border-radius: 4px;
+//     margin-left: 30px;
+//   }
+
+//   .mark_d_content {
+//     font-size: 24px;
+//     color: #333333;
+//     letter-spacing: 0;
+//     padding: 15px 0 30px;
+//     box-sizing: border-box;
+//     margin: 0 30px;
+//   }
+
+//   .mark_d_join {
+//     font-size: 24px;
+//     color: #929292;
+//     letter-spacing: 0;
+//     line-height: 26px;
+//     margin-left: 30px;
+//   }
+
+//   .mark_d_footer {
+//     width: 100%;
+//     background: #FFFAF4;
+//     font-size: 24px;
+//     color: #D07C4E;
+//     letter-spacing: 0;
+//     padding: 10px 0 40px 30px;
+//     box-sizing: border-box;
+//     display: flex;
+//     align-items: center;
+//   }
+
+//   .ds_xdTips {
+//     width: 30px;
+//     height: 30px;
+//     margin-right: 10px;
+//   }
+
+//   .page-footer{
+//     width: 100%;
+//     padding: 20px 0px 110px 0px;
+//     position: fixed;
+//     bottom: 0px;
+//     border-bottom: 1px solid #F7F8FA;
+//     z-index: 10;
+//     background-color: #FFFFFF;
+//     // background-color: orange;
+//   }
+//   .page-footer-content{
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     background: #FFF6E7;
+//     padding: 20px 32px;
+//     font-size: 26px;
+//   }
+//   .page-footer-content .left{
+//     color: #D07C4E;
+//     display: flex;
+//   }
+//   .page-footer-content .right{
+//     color: #0C82F1;
+//   }
+//   .lf-layout{
+//     display:flex;/*内联对象需加*/
+//     letter-spacing: 1px;  /*字间距*/
+//     width:18em;/*指定宽度*/
+//     word-break:keep-all;/* 不换行 */
+//     white-space:nowrap;/* 强制在同一行内显示所有文本,直到文本结束或者遭遇 br 对象。不换行 */
+//     overflow:hidden;/* 内容超出宽度时隐藏超出部分的内容 */
+//     text-overflow:ellipsis;
+//   }
+//   .page-footer-row{
+//     // height: 98px;
+//     height: 120px;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//   }
+//   .page-footer-left {
+//     margin: 0 auto;
+//     margin-left: 30px;
+//     display: flex;
+//     align-items: flex-end;
+//     margin-top: -15px;
+//     font-size: 32px;
+//   }
+
+//   .page-footer-left .sfje-num-rmb {
+//     font-size: 32px;
+//     line-height: 32px;
+//   }
+//   .page-footer-left .sfje-num-left {
+//     font-size: 46px;
+//     line-height: 46px;
+//   }
+//  .page-footer-left .sfje-num-right {
+//     font-size: 36px;
+//     line-height: 36px;
+//   }
+//   .foot-btn{
+//     border-radius: 44px;
+//     color:white;
+//     padding: 20px 40px;
+//     margin: 0 30px 0 0;
+//     font-size: 32px;
+//     line-height: 48px;
+//   }
+//   .not-click-btn{
+//     background:  #5DB2FF!important;
+//   }
+//   .click-btn{
+//     background: #0C82F1;
+//   }
+//   .not-click-btn-green{
+//     background:  #42CABB!important;
+//   }
+//   .click-btn-green{
+//     background: #27C1B8;
+//   }
+//   .proportion-tips{
+//     background: #FFF6E7;
+//     color: #D07C4E;
+//     position: relative;
+//     width: calc(100% + 60px);
+//     margin: 30px 0px;
+//     padding: 14px 0px 14px 30px;
+//     left: -30px;
+//     font-size: 26px;
+//     box-sizing:border-box;
+//   }
+//   .proportion-tips-image{
+//     width: 30px;
+//     height: 34px;
+//     position: relative;
+//     top: 7px;
+//   }
+//   // .lf-label{
+//   //   display: flex;
+//   //   flex-wrap: wrap;
+//   //   font-size: 28px;
+//   // }
+//   // .lf-label view{
+//   //   color: #DA392C;
+//   //   background: #FEEAEE;
+//   //   padding: 0 21px;
+//   //   border-radius: 4px;
+//   //   margin-right: 21px;
+//   //   margin-top: 13px;
+//   // }
+//   // .span{
+//   //   color: #DA392C;
+//   // }
+
+
+//   // --------------------------------------------------------------------------------------------------输入金额
+//   .page-view-money {
+//     background: #FFFFFF;
+//     border-radius: 10px 10px 0px 0px;
+//   }
+
+
+
+//   /*h5关怀版新增*/
+//   body, html {
+//     background-color: #f7f8fa;
+//   }
+
+
+// //--优惠券弹窗
+//   .picker_view_box {
+//     width: 100%;
+//     height: 100%;
+//     background: rgba(0,0,0,0.5);
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     z-index: 999;
+//   }
+
+//   .picker_view {
+//     background: #fff;
+//     position: fixed;
+//     bottom: 0;
+//     left:0;
+//     right:0;
+//     z-index: 999;
+//   }
+
+//   .picker_view_title {
+//     display: flex;
+//     justify-content: space-between;
+//     height: 112px;
+//     line-height: 112px;
+//     padding: 0 5%;
+//     box-sizing: border-box;
+//   }
+
+//   .close {
+//       width: 200px;
+//       font-size: 50px;
+//   }
+
+//   .no {
+//       width: 200px;
+//       text-align: right;
+//   }
+
+//   .tapChange {
+//     display: flex;
+//     width: 100%;
+//     height: 80px;
+//     line-height: 80px;
+//     justify-content: space-around;
+//     font-size: 28px;
+//     color: #6A6A6A
+//   }
+//   .tapChange_blue {
+//     color: #333333;
+//     position: relative;
+//   }
+//   .tapChange_blue::after {
+//     content:'';
+//     width: 80px;
+//     height:4px;
+//     position: absolute;
+//     z-index: 999;
+//     bottom: 10px;
+//     left: 50px;
+//     background-image: linear-gradient(-45deg, #0C82F1 0%, #5DB2FF 100%);
+//     border-radius: 2px
+//   }
+
+//   .active {
+//     color: #333333;
+//   }
+
+//   .deductionBox {
+//     font-size: 30px;
+//     color: #333333;
+//     display: flex;
+//     padding: 20px 5%;
+//     box-sizing: border-box;
+//     border-top: solid 1px #EDEDED;
+//     height:90px;
+//     position: relative;
+//   }
+
+//   .deductionMoney {
+//     font-size: 30px;
+//     color: red;
+//     margin-left: 5px;
+//   }
+//   .use-recommend-coupon {
+//     position: absolute;
+//     top: -160px;
+//     right: 30px;
+//     box-sizing: border-box;
+//     // width: 200px;
+//     padding: 5px 15px;
+//     font-size: 30px;
+//     text-align: center;
+//     color: white;
+//     background-color: #ec808d;
+//     border-radius: 10px;
+//   }
+
+//   .couponList {
+//     box-sizing: border-box;
+//     width: 100%;
+//     // height: 400px;
+//     height:700px;
+//     background: #F7F8FA;
+//     overflow: hidden;
+//     overflow-y: scroll;
+//     padding: 30px;
+//   }
+//   .couponListShort {
+//     height:610px;
+//     padding-bottom: 270px;
+//   }
+
+//   .couponItem {
+//     box-sizing: border-box;
+//     height:200px;
+//     background: url('../../images/ds_couponBg.png') no-repeat;
+//     background-size: 100% 100%;
+//     display:flex;
+//     align-items: center;
+//   }
+//   .couponItem_gray {
+//     box-sizing: border-box;
+//     height:200px;
+//     background: url('../../images/ds_couponBg_gray.png') no-repeat;
+//     background-size: 100% 100%;
+//     display:flex;
+//     align-items: center;
+//   }
+
+//   .btn_box {
+//     width: 100%;
+//     padding: 40px 0;
+//     box-sizing: border-box;
+//     background: #fff;
+//     display: flex;
+//     align-items: center;
+//     position:fixed;
+//     bottom: 0;
+//     left: 0;
+//     right: 0;
+//   }
+
+//   .btn {
+//     width: 90%!important;
+//     height: 100px;
+//     line-height: 100px;
+//     margin-left: 5%;
+//     background-image: linear-gradient(-45deg, #0C82F1 0%, #5DB2FF 100%);
+//     color: #fff;
+//     font-weight: normal;
+//     font-size: 32px;
+//   }
+//   .picker_view_box .couponItem-left {
+//       width: 29%;
+//       height: 200px;
+//       // background-image: linear-gradient(131deg, rgb(150,176,234) 0%, rgb(64,142,230) 100%);
+//       display: flex;
+//       align-items: center;
+//       justify-content: center;
+//       flex-direction: column;
+//       font-size: 26px;
+//       color: #FFFFFF;
+//       .couponItem-left-text {
+//         font-size: 48px;
+//       }
+//       .couponItem-left-view {
+//         font-size: 30px;
+//       }
+//   }
+
+//   .picker_view_box .couponItem-right {
+//       width: 64.8%;
+//       font-size: 22px;
+//       color: #333333;
+//       letter-spacing: 0;
+//       line-height: 22px;
+//       flex: 1;
+//       padding: 16px;
+//       position: relative;
+//       height: 200px;
+//       box-sizing: border-box;
+//       display: flex;
+
+//       .couponItem-right-l {
+//         display: flex;
+//         flex-direction: column;
+//         font-size: 22px;
+//         margin-left:5%;
+//         width: 80%;
+//         // background-color: #BDC4CA;
+//         .right-title {
+//           height: 60px;
+//           box-sizing: content-box;
+//           padding-bottom:30px;
+//           display: flex;
+//           flex-direction: column;
+//           justify-content: center;
+//           overflow-y: visible;
+//           .right-title-text {
+//             font-size: 30px;
+//             line-height: 40px;
+//             word-wrap: break-word;
+//           }
+//         }
+//         .right-time {
+//           // background-color: pink;
+//           font-size: 26px;
+//           word-break: keep-all;
+//           white-space:nowrap;
+//         }
+//         .right-time-describe {
+//           font-size: 26px;
+//           margin-top: 31px;
+//         }
+//       }
+//       .couponItem-right-r {
+//         margin: auto;
+//         .couponItem-right-r-checked,
+//         .couponItem-right-r-nochecked{
+//           width: 36px;
+//           height: 36px;
+//           left: -20px;
+//           top: -5px;
+//         }
+//       }
+
+//       .page-section-demo {
+//         position: absolute;
+//         right: 30px;
+//         top: 75px;
+//       }
+//       .right-overly {
+//         width: 96px;
+//         height:65px;
+//         position: absolute;
+//         right: 5px;
+//         top: 0px;
+//       }
+
+//   }
+
+// //tablebar
+//   .pay-electricity-charges-tablebar {
+//     position: fixed;
+//     left: 0;
+//     right:0;
+//     bottom: 0;
+//     z-index: 11;
+//   }
+// }

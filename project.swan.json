@@ -1,0 +1,25 @@
+{
+  "appid": "26658225",
+  "compilation-args": {
+      "common": {
+          "ignorePrefixCss": false,
+          "ignoreTransJs": false,
+          "ignoreUglify": false
+      }
+  },
+  "compileType": "miniprogram",
+  "developType": "normal",
+  "host": "baiduboxapp",
+  "miniprogramRoot": "./",
+  "projectname": "swan",
+  "setting": {
+      "urlCheck": false
+  },
+  "smartProgramRoot": "./",
+  "swan": {
+      "baiduboxapp": {
+          "extensionJsVersion": "1.21.2",
+          "swanJsVersion": "3.450.19"
+      }
+  }
+}

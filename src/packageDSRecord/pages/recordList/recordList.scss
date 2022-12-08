@@ -1,0 +1,102 @@
+.record {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+#theFixedBox {
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index: 9999;
+}
+// .record-header {
+//     display: flex;
+//     height: 74px;
+//     font-size: 36px;
+//     align-items: center;
+//     background: #fff;
+//     padding: 20px 0;
+//     position: absolute;
+//     z-index: 9999;
+//     width: 100%;
+//     padding-top: 6px;
+// }
+// .record-title-back {
+//     padding-left: 20px;
+// }
+// .record-title-pic {
+//     height: 35px!important;
+//     width: 24px!important;
+//     margin-left: 2px;
+// }
+// .record-title-content {
+//     text-align: center;
+//     width: 100%;
+// }
+.ele-record {
+    width: 100%;
+    background: #F7F8FA;
+    overflow-y: scroll;
+    height: calc(100vh - 144px);
+}
+.ele-record .ele-record-empty {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    flex-direction: column
+}
+.ele-record .ele-record-empty .record-empty-img {
+    width: 360px;
+    height: 240px;
+    margin-top: 180px;
+}
+.ele-record .ele-record-empty .record-empty-words {
+    color: #5C5C5C;
+    font-size: 24px;
+    padding-top: 36px;
+}
+.ele-record-empty {
+    height: 100%;
+    margin-top: 10px;
+}
+.record-list-item {
+    margin: 10px 5% 20px 5%;
+    padding: 40px 30px 36px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.record-list-item .list-item-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 28px;
+}
+.record-list-item .list-item-title .list-item-left {
+    color: #6A6A6A;
+}
+.record-list-item .list-item-info {
+    margin-top: 3px;
+    color: #929292;
+    font-size: 28px;
+}
+.record-list-item .list-item-info.number {
+    margin-top: 10px;
+}
+.ele-record-list .list-item-tips {
+    width: 100%;
+    text-align: center;
+    color: #929292;
+    font-size: 30px;
+    padding-bottom: env(safe-area-inset-bottom);
+}
+.list-item-tips.btn {
+    padding-bottom: 40px;
+} 

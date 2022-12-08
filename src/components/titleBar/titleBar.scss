@@ -1,0 +1,65 @@
+
+.atd-config-transparent-header .content-wrap {
+  position: fixed;
+  z-index: 10;
+  width:100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  min-height: 74px;
+  top:0;
+  .content-left,
+  .content-center,
+  .content-right{
+    width:33%;
+  }
+}
+.content-left{
+  display: flex;
+  margin-left:30px;
+  align-items: center;
+}
+.content-left-word{
+  font-size:28px;
+  margin-left: 10px;
+}
+.atd-config-transparent-header  .content-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-size: 34px;
+  z-index: 1;
+  text-align: center;
+  white-space: nowrap;
+}
+.atd-config-transparent-header .content-right {
+  margin-right: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+}
+.content-right-image{
+  width:50px;
+  height:50px;
+  margin: 0 0 0 20px;
+  display: flex;
+  align-items: center;
+}
+.alipayTitle {
+  background-color: #5db2ff;
+}
+
+.atd-config-transparent-header .content-top .statusBar {
+  background-color: green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back_bg {
+  width: 20px;
+  height: 36px;
+}

@@ -1,0 +1,80 @@
+/**app.wxss**/
+html,body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+page {
+  height: 100%;
+}
+
+.venus-container {
+  height:100%;
+  overflow-y: auto;
+} 
+
+.venus-container.venus-splash {
+  padding: 200rpx 0;
+  margin: 0 auto;
+}
+
+.venus-error {
+  color: red;
+  font-size: 14px;
+  padding: 10px;
+}
+
+.venus-item {
+  border-bottom: solid 1px #ddd;
+}
+
+.venus-item-input {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 10px 0 8px 16px;
+  border-left-width: 0;
+  border-right-width: 0;
+}
+
+.venus-input-label {
+  // font-size: 14px;
+  max-width: 200px;
+  width: 35%;
+}
+
+input {
+  width: 100%;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.venus-input-placeholder {
+  font-size: 14px;
+}
+
+.venus-buttons {
+  margin: 20px;
+}
+
+.venus-buttons button {
+  margin: 20px;
+}
+
+.venus-buttons button.disabled {
+  color: #dddddd;
+}
+
+button::after{
+  border: none;
+}

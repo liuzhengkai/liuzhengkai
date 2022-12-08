@@ -1,0 +1,112 @@
+.careWrap {
+  #theFixedBox {
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+  }
+  .deduction-rule {
+    background-color: #FFFFFF;
+    .deduction-rule-scroll {
+      box-sizing: border-box;
+      overflow-y: scroll;
+      height: calc(100vh - 157px);
+      padding-bottom: 60px;
+    }
+    .deduction-rule-title {
+      height: 96px;
+      font-size: 32px;
+      display: flex;
+      border-top: 1px solid #EDEDED;
+      .deduction-rule-title-text {
+        flex: 8;
+        padding-left: 30px;
+        line-height: 96px;
+      }
+      .deduction-rule-title-imgview {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 2;
+        taro-image-core {
+          overflow: inherit;
+        }
+        .deduction-rule-title-img {
+          width: 22px;
+          height: 13px;
+        }
+      }
+    }
+    .deduction-rule-contain {
+      padding: 0px 40px 40px 40px;
+      border-top: 1px solid #EDEDED;
+      font-size: 28px;
+      .deduction-rule-contain-title {
+        padding: 30px 0px 20px 0px;
+        font-size: 30px;
+      }
+    }
+    .deduction-rule-line {
+      height: 1px;
+      background-color: #EDEDED;
+    }
+  }
+
+}
+
+.defaultWrap {
+  #theFixedBox {
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+  }
+  .deduction-rule {
+    background-color: #FFFFFF;
+    .deduction-rule-scroll {
+      box-sizing: border-box;
+      overflow-y: scroll;
+      height: calc(100vh - 157px);
+      padding-bottom: 60px;
+    }
+    .deduction-rule-title {
+      height: 96px;
+      font-size: 28px;
+      display: flex;
+      border-top: 1px solid #EDEDED;
+      .deduction-rule-title-text {
+        flex: 8;
+        padding-left: 30px;
+        line-height: 96px;
+      }
+      .deduction-rule-title-imgview {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 2;
+        taro-image-core {
+          overflow: inherit;
+        }
+        .deduction-rule-title-img {
+          width: 22px;
+          height: 13px;
+        }
+      }
+    }
+    .deduction-rule-contain {
+      padding: 0px 40px 40px 40px;
+      border-top: 1px solid #EDEDED;
+      font-size: 28px;
+      .deduction-rule-contain-title {
+        padding: 30px 0px 20px 0px;
+        font-size: 28px;
+      }
+    }
+    .deduction-rule-line {
+      height: 1px;
+      background-color: #EDEDED;
+    }
+  }
+}

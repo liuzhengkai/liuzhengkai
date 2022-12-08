@@ -1,0 +1,234 @@
+<template>
+
+  <view class="payment-password-no-set-bg" v-if="isShow && taroEnv == 'h5'">
+    <view class="payment-password-no-set-main">
+      <view class="payment-password-no-set-title">
+        <text class="payment-password-no-set-title-text" @tap="handleClickClose">×</text>
+        请输入支付密码
+      </view>
+      <view class="payment-password-no-set-contain">
+        <view class="payment-password-no-set-contain-firstset">首次支付需设置支付密码</view>
+        <view class="payment-password-no-set-contain-type">
+          <radio-group @change="onChange" class="payment-password-no-set-contain-type-group">
+            <label v-for="(item,ind) in passwordType" :key="ind"
+              :class="{'payment-password-no-set-contain-type-label-gray':true,'payment-password-no-set-contain-type-label-blue':false}">
+              <radio class="payment-password-no-set-contain-type-radio" :value="item.id" :checked="item.checked">
+                {{ item.text }}
+              </radio>
+            </label>
+          </radio-group>
+        </view>
+        <view class="payment-password-no-set-contain-keyboard">
+          <view class="payment-password-no-set-contain-keyboard-view">
+            <text class="payment-password-no-set-contain-keyboard-view-text">输入密码</text>
+            <view class="payment-password-no-set-contain-keyboard-view-iptbox" v-show="passwordType[0].checked">
+              <input id="PAYPSW_COMPLEX" maxlength="6" type="password" label="支付密码" placeholder="请输入6位数字"
+                autocomplete="new-password" class="keyboard payment-password-no-set-contain-keyboard-view-ipt"
+                data-ktype="Number" style-placeholder="color: #CCCCCC;" />
+            </view>
+            <view class="payment-password-no-set-contain-keyboard-view-iptbox" v-show="passwordType[1].checked">
+              <input id="PAYPSW_COMPLEX_A" minlength="8" maxlength="12" type="password" label="支付密码"
+                placeholder="请输入8-12位数字和字母组合" autocomplete="new-password"
+                class="keyboard payment-password-no-set-contain-keyboard-view-ipt"
+                style-placeholder="color: #CCCCCC;" />
+            </view>
+
+          </view>
+        </view>
+        <view class="payment-password-no-set-contain-keyboard">
+          <view class="payment-password-no-set-contain-keyboard-view">
+            <text class="payment-password-no-set-contain-keyboard-view-text">再次确认</text>
+            <view class="payment-password-no-set-contain-keyboard-view-iptbox" v-show="passwordType[0].checked">
+              <input id="PAYPSW_COMPLEX_RE" maxlength="6" type="password" label="支付密码" placeholder="确认支付密码"
+                autocomplete="new-password" class="keyboard payment-password-no-set-contain-keyboard-view-ipt"
+                data-ktype="Number" style-placeholder="color: #CCCCCC;" />
+            </view>
+            <view class="payment-password-no-set-contain-keyboard-view-iptbox" v-show="passwordType[1].checked">
+              <input id="PAYPSW_COMPLEX_A_RE" minlength="8" maxlength="12" type="password" label="支付密码"
+                placeholder="确认支付密码" autocomplete="new-password"
+                class="keyboard payment-password-no-set-contain-keyboard-view-ipt"
+                style-placeholder="color: #CCCCCC;" />
+            </view>
+          </view>
+        </view>
+        <view class="payment-password-no-set-contain-code">
+          <view class="payment-password-no-set-contain-code-view">
+            <text class="payment-password-no-set-contain-code-view-text">验证码</text>
+            <input id="codePhone" class="payment-password-no-set-contain-code-view-ipt" maxlength="6" type="number"
+              style-placeholder="color: #CCCCCC;" @input="codeInputFn" :value="codeValue" />
+            <text class="payment-password-no-set-contain-code-view-btn" @tap="handleClickGetCode"
+              v-show="!countdowning">获取验证码</text>
+            <text class="payment-password-no-set-contain-code-view-btn" v-show="countdowning">{{countseconds}}s</text>
+          </view>
+        </view>
+        <view class="payment-password-no-set-contain-safe">{{phoneCodeTips}}</view>
+      </view>
+      <view class="payment-password-no-set-btn">
+        <view class="payment-password-no-set-btn-button" @tap="handleClickOk">确认</view>
+      </view>
+    </view>
+  </view>
+</template>
+
+<script>
+  import './paymentPasswordNoSet.scss'
+  import {
+    dsUtils
+  } from "../../bussinessUtil/dsUtils";
+  export default {
+    props: {
+      isShow: {
+        type: Boolean
+      }
+    },
+    data() {
+      return {
+        taroEnv: process.env.TARO_ENV,
+        passwordType: [{
+            id: 0,
+            text: '6位数字',
+            checked: true
+          },
+          {
+            id: 1,
+            text: '字母加数字',
+            checked: false
+          }
+        ],
+        passwordObj: {
+          pwd: '', //数字密码
+          pwdA: '', //数字字母的密码
+        },
+        password: '', //密码
+        codeValue: '', //验证码
+        phoneCodeTips: '为保障您的账户资金安全，需进行短信验证',
+        countseconds: 60, // 倒计时默认时间
+        countdowning: false, // 计时器开关
+        countInteval: undefined, //计时器编号
+        phoneLastNum:'', //手机后四位
+      }
+    },
+    watch: {
+      isShow() {
+        if (this.taroEnv == 'h5' && this.isShow) {
+          const getSecurityPad = require('../../utils/h5/keyboard-wrap')
+          this.initPad = getSecurityPad
+          console.log(this.initPad)
+          setTimeout(() => {
+            this.initPad.SecurityPad.init('https://wsgw.95598pay-test.com:29943')
+          }, 0)
+        }
+        if(this.taroEnv == 'h5' && !this.isShow){
+          //清除定时器
+          clearInterval(this.countInteval)
+          this.phoneCodeTips = '为保障您的账户资金安全，需进行短信验证'
+          this.countseconds = 60
+          this.countdowning = false
+          //清除密码隐藏键盘
+          this.initPad.SecurityPad.clearAll()
+          this.initPad.SecurityPad.hideAll()
+          this.initPad.SecurityPad.distoryAll()
+          //清除验证码和密码
+          this.codeValue = ''
+          this.password = ''
+        }
+      }
+    },
+    mounted(){
+
+    },
+    methods: {
+      onChange(e) {
+        this.passwordType.forEach((item) => {
+          item.checked = false
+        })
+        this.passwordType[e.detail.value].checked = true
+      },
+      handleClickGetCode() { // 获取验证码
+        dsUtils.request('osg-p0001/member/p1/f03', {
+          params: {
+            "DEVICE_NO": "",
+            "CRDEXPDT": "",
+            "PRE_ORDER_ID": "",
+            "CVN2": "",
+            "SMSTOKEN": "",
+            "USETYP": "99",
+            "CRDHOLDERNM": "",
+          },
+          success: (res) => {
+            let phoneNum = res.data.MBL_NO
+            let phoneLastNum = '*' + phoneNum.substring(8,11)
+            this.phoneLastNum = phoneLastNum
+            // 返参 res.data.data.MBL_NO   String 接收短信手机号 发短信的手机号
+            dsUtils.toast("短信验证码发送成功，请注意查收");
+            this.countDownStart()
+          }
+        })
+      },
+      countDownStart() { // 倒计时开始
+        clearInterval(this.countInteval)
+        this.countseconds = 60
+        this.phoneCodeTips = `验证码已发送至您尾号${this.phoneLastNum}的手机`
+        this.countInteval = setInterval(() => {
+          this.countdowning = true //计时器开关
+          this.countseconds = this.countseconds--
+
+          if (this.countseconds-- <= 0) {
+            clearInterval(this.countInteval)
+            this.countseconds = 60
+            this.phoneCodeTips = '为保障您的账户资金安全，需进行短信验证'
+            this.countdowning = false
+            this.phoneLastNum = ''
+          }
+
+        }, 1000)
+      },
+      codeInputFn(e) { //验证码输入框
+        this.codeValue = e.detail.value
+      },
+      handleClickClose() {
+        this.$emit('handleClickClose')
+      },
+      handleClickOk() {
+        if (this.codeValue.length !== 6) {
+          dsUtils.toast("请输入6位验证码")
+          return false
+        }
+        if (this.passwordType[0].checked) { //数字密码
+          let length = this.initPad.SecurityPad.length('PAYPSW_COMPLEX')
+          if (length !== 6) {
+            dsUtils.toast("请输入6位数字")
+            return false
+          }
+          if (!this.initPad.SecurityPad.same('PAYPSW_COMPLEX', 'PAYPSW_COMPLEX_RE')) {
+            dsUtils.toast("两次密码输入不一致")
+            return false
+          }
+          this.passwordObj.pwd = this.initPad.SecurityPad.value('PAYPSW_COMPLEX')
+          this.password = this.passwordObj.pwd
+        } else { //数字加字母密码
+          let length_A = this.initPad.SecurityPad.length('PAYPSW_COMPLEX_A')
+          if (length_A < 8 || length_A > 12) {
+            dsUtils.toast("请输入8-12位数字和字母组合")
+            return false
+          }
+          if (!this.initPad.SecurityPad.same('PAYPSW_COMPLEX_A', 'PAYPSW_COMPLEX_A_RE')) {
+            dsUtils.toast("两次密码输入不一致")
+            return false
+          }
+          this.passwordObj.pwdA = this.initPad.SecurityPad.value('PAYPSW_COMPLEX_A')
+          this.password = this.passwordObj.pwdA
+        }
+
+        let arr = []
+        arr.push(this.password)
+        arr.push(this.codeValue)
+        this.$emit('handleClickOk', arr)
+      }
+    }
+  }
+</script>
+
+<style scoped>
+
+</style>

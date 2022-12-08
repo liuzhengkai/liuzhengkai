@@ -1,0 +1,169 @@
+.confirmpay {
+  background-color: #f7f8fa;
+  position: relative;
+  height: 100%;
+  box-sizing:border-box;
+  overflow: hidden;
+
+  .confirmpay_head {
+    height: 88px;
+    background-color: #FFFFFF;
+    position: relative;
+
+    .confirmpay_head_back {
+      position: absolute;
+      left: 0px;
+      bottom: 0px;
+      width: 100px;
+      height: 88px;
+      padding-left: 30px;
+      display: flex;
+      align-items: center;
+
+      .confirmpay_head_back_picture {
+        display: block;
+        width: 19.5px;
+        height: 36px;
+        margin: 0;
+      }
+    }
+    .confirmpay_head_title {
+      text-align: center;
+      font-size: 32px;
+      color: #333333;
+      line-height: 88px;
+    }
+  }
+
+
+  .confirmpay_body {
+    .confirmpay_body_info,
+    .confirmpay_body_payment {
+      margin-top: 20px;
+      background-color: #ffffff;
+    }
+
+    .confirmpay_body_info_view {
+      padding: 0px 30px;
+      height: 96px;
+      border-top: 1px solid #EDEDED;
+      font-size: 28px;
+      line-height: 96px;
+      color: #929292;
+
+      .confirmpay_body_info_view_text {
+        float: right;
+        color: #333333;
+      }
+    }
+
+    .confirmpay_body_payment {
+      .payTitle {
+        height: 70px;
+        padding-left: 30px;
+        font-size: 24px;
+        color: #666666;
+        line-height: 70px;
+        border-bottom: 1px solid #EDEDED;
+      }
+      .payLableBox {
+        width: 100%;
+      }
+      .payLableBoxView{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 27px 32px 28px 30px;
+        box-sizing: border-box;
+        border-bottom: 1px solid #EDEDED;
+        .payLableBoxViewLeft {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          .leftBox {
+            display: flex;
+            align-items: center;
+            .leftImage {
+              width: 70px;
+              height: 70px;
+              flex-shrink: 0;
+            }
+            .leftContent {
+              margin-left: 30px;
+              flex-shrink: 0;
+              flex: 1;
+              .payName {
+                display: block;
+                line-height: 40px;
+                font-size: 28px;
+              }
+              .payText {
+                display: block;
+                line-height: 40px;
+                color: #929292;
+                font-size: 24px;
+              }
+              .payLableDown {
+                display: inline-block;
+                border: 2px solid #DA392C;
+                border-radius: 4px;
+                font-size: 20px;
+                color: #DA392C;
+                padding: 0 12px;
+                box-sizing: border-box;
+              }
+            }
+          }
+          .rightBox {
+            height: 100px;
+            flex-shrink: 0;
+            margin: 0 22px;
+            display: flex;
+            align-items: center;
+            .payLableBoxViewRight {
+              border: 2px solid #DA392C;
+              border-radius: 4px;
+              font-size: 20px;
+              color: #DA392C;
+              padding: 0 12px;
+              box-sizing: border-box;
+            }
+          }
+        }
+        .payRadio {
+          .weui-cells_checkbox .weui-check:checked+.weui-icon-checked:before {
+            color: #0c82f1;
+          }
+        }
+      }
+    }
+    .payTips {
+      margin-top: 10px;
+      text-align:center;
+      font-size:22px;
+      line-height: 40px;
+      color: #999999;
+      background-color: #f7f8fa;
+    }
+  }
+  .payFooter {
+    height: 150px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ffffff;
+
+    .payFooterBtn {
+      margin: 30px;
+      height: 90px;
+      background-image: linear-gradient(134deg, #22D1D6 0%, #0FA5AC 100%);
+      border-radius: 10px;
+      font-size: 32px;
+      color: #FFFFFF;
+      text-align: center;
+      line-height: 90px;
+    }
+  }
+}
