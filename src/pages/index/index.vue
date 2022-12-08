@@ -57,6 +57,27 @@
       </view>
       <button v-if="swanLoginBtnIsShow" class="swan-login" hover-class="none" contact open-type="login" @login="loginBaiDu"></button>
     </view>
+    <view class="agmtMask" v-show="isAgreement">
+      <view class="agmtContentBox">
+        <view class="agmtTitle">协议与隐私</view>
+        <view class="agmtText">感谢您使用网上国网，根据最新法律要求，使用我们的产品前，请先仔细阅读并同意《用户绑定协议》与《隐私声明》，感谢您的使用。</view>
+        <view class="agmtChecked">
+          <view class="agreementBD">
+            <image class="agreementBDTrue" src="../../assets/images/ds_checkedTrue.png"  v-show="isChecked" @tap="changeCheckBox"></image>
+            <view class="agreementBDFalse" v-show="!isChecked" @tap="changeCheckBox"></view>
+          </view>
+          <view>
+            <text>阅读并同意</text>
+            <text style="color:#0c82f1" data-gid='0' @tap="showDocInfo">《用户绑定协议》</text>
+            <text style="color:#0c82f1" data-gid='1' @tap="showDocInfo">《隐私声明》</text>
+          </view>
+        </view>
+        <view class="agmtBtn">
+          <view class="agmtBtnLeft" @tap="agmtBtnLeft">取消</view>
+          <view class="agmtBtnRight" @tap="agmtBtnRight">同意并继续</view>
+        </view>
+      </view>
+    </view>
   </view>
 </template>
 
@@ -74,11 +95,14 @@ export default {
     return {
       isShow: false,
       out_province_code: '', // 省码
-      out_province_name: '请选择', // 省份名称
+      out_province_name: '请选择地区', // 省份名称
       isLogin: false, // 是否登陆
       titleBarHeight: '',
       statusBarHeight: '',
       swanLoginBtnIsShow: false, //百度小程序遮罩按钮是否显示 (用于登录百度app)
+      isChecked: false, // 默认不勾选协议
+      isDisabled: false,//防抖
+      isAgreement: true, // 协议遮罩默认显示
     };
   },
   created() {
@@ -182,6 +206,9 @@ export default {
   },
   onShow() {
     console.log('-------onShow---index')
+    if(dsUtils.getStorageSync("NOREMOVE_ISAGMT")) {
+      this.isAgreement = false;
+    }
     dsUtils.removeAllDSStorageSync()
     if(this.taroEnv == 'h5') {return}
     if (process.env.TARO_ENV == 'swan' && this.swanLoginBtnIsShow) {
@@ -216,6 +243,41 @@ export default {
     console.log('页面销毁')
   },
   methods: {
+    agmtBtnLeft() {
+      // Taro.exitMiniProgram()
+      if(this.taroEnv == 'swan') {
+        return dsUtils.toast('很遗憾我们无法提供自动关闭，请您手动关闭退出小程序')
+      } else if (this.taroEnv == 'jd') {
+        return dsUtils.toast('很遗憾我们无法提供自动关闭，请您手动关闭退出小程序')
+      } else if (this.taroEnv == 'alipay') {
+        my.exitMiniProgram()
+      } else if (this.taroEnv == 'weapp') {
+        wx.exitMiniProgram()
+      }
+    },
+    agmtBtnRight() {
+      if(this.isChecked) {
+        this.isAgreement = false;
+        dsUtils.setStorageSync("NOREMOVE_ISAGMT",true)
+      } else {
+        dsUtils.toast('请先阅读并同意协议')
+      }
+    },
+    // 切换协议
+    changeCheckBox(e) {
+      this.isChecked = !this.isChecked;
+    },
+    // 跳转协议方法
+    showDocInfo(e) {
+      if(this.isDisabled==false){
+        this.isDisabled = true
+        const eIndex = e.currentTarget.dataset.gid
+        dsUtils.navigateTo({
+          url: '/pages/docInfo/docInfo?index=' + eIndex
+        })
+        this.isDisabled = false
+      }
+    },
     loginBaiDu(e) { //登录百度APP
     //   console.log('登录信息:', e);
     //   if (e.detail.errCode === '10004' || e.detail.errCode === '904') {

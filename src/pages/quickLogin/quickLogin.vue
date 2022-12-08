@@ -6,17 +6,22 @@
       <view class="ds_register_bg">
         <image src="../../assets/images/ds_register_bg.png" />
       </view>
-      <view v-show="!isChecked">
+      <view class="locationText" @tap="getAddress">
+        <image class="locationText_left" src="../../assets/images/ds_address.png" />
+        <view class="locationText_middle">{{locationText}}</view>
+        <image class="locationText_right" src="../../assets/images/ds_right_arrow.png" />
+      </view>
+      <view v-show="!isChecked || !locationOK">
         <button class="loginBtn" @tap="quickLogin">手机号一键登录</button>
       </view>
-      <view v-show="isChecked">
+      <view v-show="isChecked && locationOK">
         <button class="loginBtn" openType="getAuthorize" scope="phoneNumber" @getAuthorize="allowDecryTel" v-if="taroEnv == 'alipay'">手机号一键登录</button>
         <button class="loginBtn" openType="getPhoneNumber" @getPhoneNumber="allowDecryTel" v-else>手机号一键登录</button>
       </view>
+      <view class="describe">若您的手机号未注册，将为您自动注册。</view>
       <view class="otherPhNum" @tap="otherPhNum">其他手机号登录</view>
     </view>
-    <view class="agreement">
-      <!-- <radio class="auth-radio"  color='#0c82f1' :checked='radio' @tap='radioChange' />  -->
+    <!-- <view class="agreement">
       <checkbox v-show="taroEnv=='alipay'" class="auth-radio" color='#0c82f1' :checked="isChecked" @change="changeCheckBox" />
       <label v-show="taroEnv=='weapp' || taroEnv=='jd'">
         <checkbox class="auth-radio" color='#0c82f1' :value="isChecked" :checked="isChecked" @tap="changeCheckBox"></checkbox>
@@ -32,7 +37,7 @@
         <text style="color:#0c82f1" data-gid='1' @tap="showDocInfo">《隐私声明》</text>
         <text>若您的手机号未注册，将为您自动注册。</text>
       </view>
-    </view>
+    </view> -->
     <view class="footer">
       <image class="footerBg" src="../../assets/images/ds_pay_result_bottom.png" />
       <view class="downLoadCode">更多精彩活动就在网上国网APP，扫码下载吧</view>
@@ -71,7 +76,9 @@
           isContent: true, // 文字是否居中
         },
         showComponents: false,
-        isChecked: false,
+        locationText: '请选择登录地区',
+        locationOK: false,
+        isChecked: true, //用户已在首页同意协议(合规改版)
         phone: '',
         taroEnv: process.env.TARO_ENV,
         onLogin: false, //登录成功了吗
@@ -81,21 +88,21 @@
       TitleBar,
       Modal
     },
-    onShow() {
+    onLoad() {
       if (this.taroEnv == 'h5') { return }
-      let that = this;
       let cityData = Taro.getStorageSync('AOP_CITY_DATA')
       if (cityData) { // 有缓存用缓存中的位置
-        return
-      } else { // 无缓存用定位    
-        AOP.getLocation().then((res) => {
-          if (res.provinceName && res.provinceCode5) {
-            that.out_province_code = res.provinceCode5,
-              that.out_province_name = res.provinceName
-            Taro.setStorageSync('AOP_CITY_DATA', res)
-          }
-        }).catch((err) => {
-          this.showComponents = true;
+        this.locationText = cityData.provinceName
+        this.locationOK = true
+      } else { // 无缓存自动定位
+        this.locationText = '定位中...'
+        AOP.getLocation().then((res) => { 
+          Taro.setStorageSync('AOP_CITY_DATA', res)
+          this.locationText = res.provinceName
+          this.locationOK = true
+        }).catch(() => {
+          this.locationText = '请选择登录地区'
+          this.locationOK = false
         })
       }
     },
@@ -112,6 +119,14 @@
       }
     },
     methods: {
+      getAddress() {//手动选择地区
+        if(this.locationText == '定位中...'){return}
+        AOP.chooseAddressInfo({"Hierarchy": '3',"obtainHierarchy": '2'}).then((res)=>{
+          Taro.setStorageSync('AOP_CITY_DATA',res)
+          this.locationText = res.provinceName
+          this.locationOK = true
+        })
+      },
       cancel() {
         let that = this
         that.showComponents = false;
@@ -121,11 +136,18 @@
       },
       // 一键登录按钮（未勾选协议）
       quickLogin() {
-        Taro.showToast({
-          title: '请先阅读并同意用户绑定协议和隐私声明',
-          icon: 'none',
-        })
-
+        if(!this.checked){
+          Taro.showToast({
+            title: '请先阅读并同意用户绑定协议和隐私声明',
+            icon: 'none',
+          })
+        }
+        if (!this.locationOK) {
+          Taro.showToast({
+            title: '请选择登录地区',
+            icon: 'none',
+          })
+        }
       },
       // 切换协议
       changeCheckBox() {

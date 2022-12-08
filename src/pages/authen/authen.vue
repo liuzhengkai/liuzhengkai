@@ -1,56 +1,26 @@
 <template>
-  <!-- pages/auth/index.wxml -->
   <view class="auth-wrap">
-    <TitleBar :title-bar-obj="titleBarObj" @goBack="goBack"/>
-    <view action="">
-      <view class="number-line"></view>
-      <view class="auth-flex">
-        <view >手机号码</view>
+    <TitleBar :title-bar-obj="titleBarObj" @goBack="goBack" />
+    <view class="box_tit">登录地区</view>
+    <view class="box_con" @tap="getAddress">
+      <view class="box_con_info" :style="{ 'color': locationText == '请选择地区' ? '#CCCCCC' : 'black' }">{{ locationText }}
       </view>
-      <view class="auth-content">
-        <input class="auth-input" maxlength="11" @input="phoneChange" v-model="phone" :controlled="true" type="number" name="phone" placeholder="请输入手机号" placeholder-class="placeholder-class" />
-      </view>
-      <view class="after-line"></view>
-      <view class="auth-label">验证码</view>
-      <view class="auth-content">
-        <input class="auth-input" name="code" v-model="code" placeholder="请输入验证码" maxlength="6" type="number" :controlled="true"  @input="codeChangeInput" placeholder-class="placeholder-class" slot=""/>
-        <view class="getcode-btn">
-          <text class="getcode-btn-before"></text>
-          <view class="code-box">  
-              <view class="getcode-text" v-if="!showTimes" @tap='getCode' style="color:#0c82f1">
-                获取验证码
-              </view>
-              <view class="getcode-text" style="color:#333333"  v-else>{{times}}s</view>
-          </view> 
-        </view>
-      </view>
-      <view class="after-line"></view>
-      <button class="bindBtn" @tap="handleSubmit">授权绑定</button>
+      <image class="box_con_icon" src="../../assets/images/ds_right_arrow.png" />
     </view>
-    <view class="agreement">
-      <checkbox v-show="taroEnv=='alipay'" class="auth-radio" color='#0c82f1' :checked="isChecked" @change="changeCheckBox"/>
-      <label v-show="taroEnv=='weapp' || taroEnv=='jd'">
-        <checkbox class="auth-radio" color='#0c82f1' :value="isChecked" :checked="isChecked" @tap="changeCheckBox"></checkbox>
-      </label>
-      <view class="agreementBD" v-show="taroEnv=='swan'">
-        <image class="agreementBDTrue" src="../../assets/images/ds_checkedTrue.png"  v-show="isChecked" @tap="changeCheckBox"></image>
-        <view class="agreementBDFalse" v-show="!isChecked" @tap="changeCheckBox"></view>
-      </view>
-      <view>
-        <text>我已经阅读并同意</text>
-        <text style="color:#0c82f1" data-gid='0' @tap="showDocInfo">《用户绑定协议》</text>
-        <text style="color:#0c82f1">、</text>
-        <text style="color:#0c82f1" data-gid='1' @tap="showDocInfo">《隐私声明》</text>
-        <text>若您的手机号未注册，将为您自动注册。</text>
-      </view>
+    <view class="box_tit">手机号码</view>
+    <view class="box_con">
+      <input class="box_con_info" maxlength="11" @input="phoneChange" v-model="phone" :controlled="true" type="number"
+        name="phone" placeholder="请输入手机号" placeholder-class="placeholder-class" />
     </view>
-    <view class="footer">
-      <image class="footerBg" src="../../assets/images/ds_pay_result_bottom.png"/>
-      <view class="downLoadCode">更多精彩活动就在网上国网APP，扫码下载吧</view>
-      <image class="ds_reg_code" src="../../assets/images/ds_reg_code.png"/>
-      <view class="at_tip">交费 · 查账 · 开票 · 办电 · 报修</view>
-      <view class="at_tips">— 尽在网上国网App，您的随身电管家 —</view>
+    <view class="box_tit">验证码</view>
+    <view class="box_con">
+      <input class="box_con_info" name="code" v-model="code" placeholder="请输入验证码" maxlength="6" type="number"
+        :controlled="true" @input="codeChangeInput" placeholder-class="placeholder-class" slot="" />
+      <view class="box_con_btn" v-if="!showTimes" @tap="getCode">获取验证码</view>
+      <view class="box_con_btn" v-else style="color:#333333">{{ times }}s</view>
     </view>
+    <view class="describe">若您的手机号未注册，将为您自动注册。</view>
+    <button class="bindBtn" @tap="handleSubmit">授权绑定</button>
     <Modal :modalValue="modalValue" :showComponents="showComponents" @cancel="cancel" />
   </view>
 </template>
@@ -64,12 +34,12 @@ import { util } from '../../utils/util'
 import Modal from "@/components/modal/modal";
 
 export default {
-  data () {
+  data() {
     return {
       titleBarObj: {
         title: "用户授权",
         // tokenBol: false,
-        arrowWhite:true ,
+        arrowWhite: true,
         isNoShowArrow: false
       },
       modalValue: {
@@ -82,29 +52,31 @@ export default {
         confirmColor: '#0C82F1', // 右按钮颜色
         isContent: true, // 文字是否居中
       },
-      arrowImgUrl:require("../../assets/images/ds_right_arrow.png"),
+      arrowImgUrl: require("../../assets/images/ds_right_arrow.png"),
       showTimes: false,
       times: 60,
       phone: '',
       code: '',
       codeKey: '',
       isAgreeMentKey: '', // 短信开关接口返回值,用于注册接口的入参
-      taroEnv:process.env.TARO_ENV,
+      taroEnv: process.env.TARO_ENV,
       showComponents: false,
-      isChecked: false, // 默认不勾选协议
+      isChecked: true, //用户已在首页同意协议(合规改版)
       isDisabled: false,//防抖
       timer: null,
       onLogin: false,//登录成功了吗
+      locationText: '请选择地区',
+      locationOK: false,
     }
   },
-  components:{
+  components: {
     TitleBar,
     Modal
   },
-  computed:{
+  computed: {
 
   },
-  created(){
+  created() {
     util.dataCollection({
       "ACTTYPE": '0204',
       "SERVICEID": 'W20211008010101',
@@ -112,36 +84,36 @@ export default {
       "CHANNEL": Taro.getStorageSync('AOP_CHANNEL_CODE'),
     })
   },
-  onShow() {
+  onLoad() {
     if (this.taroEnv == 'h5') { return }
-    let that = this;
     let cityData = Taro.getStorageSync('AOP_CITY_DATA')
     if (cityData) { // 有缓存用缓存中的位置
-      return
-    } else { // 无缓存用定位    
-      AOP.getLocation().then((res) => {
-        if (res.provinceName && res.provinceCode5) {
-          that.out_province_code = res.provinceCode5,
-          that.out_province_name = res.provinceName
-          Taro.setStorageSync('AOP_CITY_DATA', res)
-        }
-      }).catch((err) => {
-        this.showComponents = true;
-      })
+      this.locationText = cityData.provinceName
+      this.locationOK = true
+    } else {
+      this.locationText = '请选择地区'
+      this.locationOK = false
     }
   },
-  beforeDestroy(){
+  beforeDestroy() {
     let __this = this
     clearInterval(__this.timer)
-    if(!__this.onLogin) {
+    if (!__this.onLogin) {
       console.log('authen页--用户未进行登录操作')
-      AOP.onfire.fire("onLogin",null)
+      AOP.onfire.fire("onLogin", null)
     } else {
       console.log('authen页--用户进行了登录操作')
     }
-    
+
   },
-  methods:{
+  methods: {
+    getAddress() {//手动选择地区
+      AOP.chooseAddressInfo({ "Hierarchy": '3', "obtainHierarchy": '2' }).then((res) => {
+        Taro.setStorageSync('AOP_CITY_DATA', res)
+        this.locationText = res.provinceName
+        this.locationOK = true
+      })
+    },
     cancel() {
       let that = this
       that.showComponents = false;
@@ -164,10 +136,10 @@ export default {
     *  获取验证码方法
     */
     getCode() {
-      if(this.isDisabled==false){
+      if (this.isDisabled == false) {
         this.isDisabled = true
         // 手机号正则
-        const verificationPhone =/^1\d{10}$/
+        const verificationPhone = /^1\d{10}$/
         if (!verificationPhone.test(this.phone)) {
           Taro.showToast({
             title: '请您输入正确的手机号',
@@ -194,29 +166,29 @@ export default {
                   "mobile": __this.phone,
                 }
               },
-            }),AOP.httpApi({ // 发短信
-                isInner: true,
-                url: '/osg-open-uc0001/outer/c03/sendVerifyCode',
-                data: {
-                  "uscInfo":{
-                    "member": AOP.getUserInfo().channelCode,
-                    "tenant": "state_grid"
-                  },
-                  "quInfo":{
-                    "isAgreeMentKey": "",
-                    "thirdPartnerId": AOP.getUserInfo().openId,
-                    "thirdUnionId": AOP.getUserInfo().openId,
-                    "accountType": AOP.accountType,
-                    "businessType":"thirdbind",
-                    "sendType":"0", //短信
-                    "account": __this.phone,
-                  }
+            }), AOP.httpApi({ // 发短信
+              isInner: true,
+              url: '/osg-open-uc0001/outer/c03/sendVerifyCode',
+              data: {
+                "uscInfo": {
+                  "member": AOP.getUserInfo().channelCode,
+                  "tenant": "state_grid"
                 },
+                "quInfo": {
+                  "isAgreeMentKey": "",
+                  "thirdPartnerId": AOP.getUserInfo().openId,
+                  "thirdUnionId": AOP.getUserInfo().openId,
+                  "accountType": AOP.accountType,
+                  "businessType": "thirdbind",
+                  "sendType": "0", //短信
+                  "account": __this.phone,
+                }
+              },
             }),
-          ]).then((val)=>{
+          ]).then((val) => {
             this.isDisabled = false
             Taro.hideLoading() // 关闭loading
-            if(val[0].srvrt && val[0].srvrt.resultCode == "0000" && val[1].srvrt && val[1].srvrt.resultCode == "0000") { //短信授权和发送短信都成功
+            if (val[0].srvrt && val[0].srvrt.resultCode == "0000" && val[1].srvrt && val[1].srvrt.resultCode == "0000") { //短信授权和发送短信都成功
               __this.isAgreeMentKey = val[0].bizrt.isAgreeMentKey
               __this.codeKey = val[1].bizrt.codeKey
               __this.showTimes = true
@@ -224,7 +196,7 @@ export default {
               __this.timer = setInterval(() => {
                 if (__this.times === 0 || __this.times === 60) {
                   clearInterval(__this.timer)
-                  __this.showTimes =  false
+                  __this.showTimes = false
                   __this.times = 60
                 }
                 __this.times = __this.times - 1
@@ -235,10 +207,10 @@ export default {
                 icon: 'none',
               })
             }
-          }).catch((err)=>{
+          }).catch((err) => {
             this.isDisabled = false
             Taro.hideLoading() // 关闭loading
-          }).catch((err)=>{
+          }).catch((err) => {
             console.log(err)
             this.isDisabled = false
             Taro.hideLoading() // 关闭loading
@@ -268,7 +240,14 @@ export default {
           icon: 'none',
         })
       }
-      if(this.isDisabled==false){
+      if (!this.locationOK) {
+        return Taro.showToast({
+          title: '请选择地区',
+          icon: 'none',
+        })
+      }
+
+      if (this.isDisabled == false) {
         this.isDisabled = true
         this.handleRegSub()
       }
@@ -283,17 +262,17 @@ export default {
     *  三方注册接口集成
     */
     handleRegSub() {
-      Taro.showLoading({title: '加载中',mask: true})
+      Taro.showLoading({ title: '加载中', mask: true })
       let __this = this
       AOP.httpApi({ //使用验证码注册
         isInner: true,
         url: '/osg-open-uc0001/outer/c03/wechatRegister',
         data: {
-          "uscInfo":{
+          "uscInfo": {
             "member": AOP.getUserInfo().channelCode,
             "tenant": "state_grid"
           },
-          "quInfo":{
+          "quInfo": {
             "code": __this.code, //短信验证码
             "codeKey": __this.codeKey,
             "isAgreeMentKey": __this.isAgreeMentKey,
@@ -317,20 +296,20 @@ export default {
         Taro.hideLoading()
         if (res && res.srvrt && res.srvrt.resultCode == "0000") { //注册成功 // 返参能直接拿到token
           __this.onLogin = true
-          AOP.onfire.fire("onLogin",{
+          AOP.onfire.fire("onLogin", {
             token: res.bizrt.token,
           })
           Taro.navigateBack({
             // delta: 2
             delta: AOP.allLoginWay[process.env.TARO_ENV].quickLogin ? 2 : 1
           })
-        } else{
+        } else {
           Taro.showToast({
             title: res.srvrt.resultMessage || "注册失败",
             icon: 'none',
           })
         }
-      }).catch((err)=>{
+      }).catch((err) => {
         __this.isDisabled = false
         Taro.hideLoading()
       })
@@ -343,7 +322,7 @@ export default {
       if (!rule.test(value)) {
         this.phone = "";
       } else if (value.length > 11) {
-        this.phone =  value.slice(0, 11);
+        this.phone = value.slice(0, 11);
       } else {
         this.phone = value;
       }
@@ -351,7 +330,7 @@ export default {
     codeChange() {
       this.handleChangeSubmitBtn()
     },
-    codeChangeInput(e){
+    codeChangeInput(e) {
       this.code = e.detail.value;
     },
     forbidDecryTel() { // 支付宝原生 // 获取手机号密文失败的回调(用户点击拒绝或系统异常)
@@ -359,7 +338,7 @@ export default {
     },
     // 跳转协议方法
     showDocInfo(e) {
-      if(this.isDisabled==false){
+      if (this.isDisabled == false) {
         this.isDisabled = true
         const eIndex = e.currentTarget.dataset.gid
         Taro.navigateTo({
@@ -369,13 +348,13 @@ export default {
       }
     },
   },
-	onShareAppMessage(res) {
-		return {
-			title: '网上国网',
-			desc: '电费轻松缴纳，随时随地享受便捷服务。',
-			path: 'pages/index/index',
-			channel:'Wxfriends,Wxmoments',
-		}
-	},
+  onShareAppMessage(res) {
+    return {
+      title: '网上国网',
+      desc: '电费轻松缴纳，随时随地享受便捷服务。',
+      path: 'pages/index/index',
+      channel: 'Wxfriends,Wxmoments',
+    }
+  },
 }
 </script>

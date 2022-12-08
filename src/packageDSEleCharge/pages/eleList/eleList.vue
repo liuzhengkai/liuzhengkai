@@ -4,7 +4,7 @@
       <TitleBar :title-bar-obj="titleBarObj"  @goBack="goBack"/>
       <image class="header_bg" v-if="taroEnv == 'h5'" mode="widthFix" src="../../images/ds_header_eleList.png"></image>
       <image class="header_bg" v-else mode="widthFix" src="../../images/ds_header.png"></image>
-      <view class="content_box" :class="taroEnv == 'h5' ? 'ELE_TitleBar_H5' : 'ELE_TitleBar_Alipay'">
+      <view class="content_box" :class="taroEnv == 'h5' ? 'ELE_TitleBar_H5' : 'ELE_TitleBar_Alipay'" v-if="ELEC_TYPE_LIST.length">
         <view class="ele_tips">您可以为以下常用户号进行交费</view>
         <view :class="taroEnv == 'h5' ? 'ele_list_h5' : 'ele_list_alipay'">
           <scroll-view>
@@ -24,6 +24,12 @@
           </scroll-view>
         </view>
       </view>
+	  <view class="noDataBox" v-else>
+		<view class="noDataImgBox">
+			<image class="noDataImg" src="../../images/ds_noData.png"></image>
+		</view>
+		<view class="noDataText">您还没有添加交费户号，请点击下方“为其他户号交费”添加户号交费</view>
+	  </view>
 	  <view class="h5_footer" v-if="taroEnv == 'h5'">
 		  <button :class="taroEnv == 'h5' ? 'btn_green_eleList' : 'btn_eleList'" @tap="addcons">为其他户号交费</button>
 	  	  <TableBar @goBack="goBack" @goHome="goHome"/>
@@ -88,7 +94,7 @@ export default {
       		careEnv: '', // 0: 普通版; 1: 关怀版
 			LEFT_QUERY_CODE: '', // 弹框左按钮跳转码值
 			RIGHT_QUERY_CODE: '', // 弹框右按钮跳转码值
-			flag: true, //是否自动跳转添加户号页面标识
+			isShowNoData: false, // 无数据标识
 			showSpringFrameMask: false, // 默认开启列表弹框
 			POP_TYPE: '', // 弹框类型 00=无 、 01=图+文 、 02=文 、 03=图
 			POP_TITLE: '' , //标题
@@ -376,14 +382,6 @@ export default {
 					// 小程序接口1是成功 关怀版接口0是成功
 					if((this.taroEnv != 'h5' && response.code == '0') || (this.taroEnv == 'h5' && response.code != '0')) {
 						this.innerText = response.message;
-						if(this.flag) {
-							if (response.message == '请先添加交费户号。') {
-								dsUtils.navigateTo({
-									url:'/packageDSEleCharge/pages/addElePowerNum/addElePowerNum'
-								})
-								this.flag = false;
-							}
-						}
 						setTimeout(() => {
 							this.innerText = ''
 						}, this.innerText.length < 40 ? 2200 : this.innerText.length*57);
@@ -399,6 +397,8 @@ export default {
 						});
 						console.log('ELEC_TYPE_LIST',ELEC_TYPE_LIST)
 						this.ELEC_TYPE_LIST = ELEC_TYPE_LIST
+					} else {
+						this.isShowNoData = true
 					}
 
 					if(dsUtils.getStorageSync('DS_SPRINGFRAME') == '') {

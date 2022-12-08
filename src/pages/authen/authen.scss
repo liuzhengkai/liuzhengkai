@@ -4,6 +4,44 @@
     background: #fff;
     height: 100vh;
 }
+.box_tit {
+  margin-top: 60px;
+  padding-left: 30px;
+  font-size: 24px;
+  color: #929292;
+  line-height: 24px;
+}
+.box_con {
+  margin: 0px 30px;
+  padding: 23px 0px 25px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #EFF0F0;
+  .box_con_info {
+    width: 100%;
+    font-size: 28px;
+    letter-spacing: 0;
+    line-height: 32px;
+  }
+  .box_con_icon {
+    width: 12.5px;
+    height: 23.5px;
+  }
+  .box_con_btn {
+    flex-shrink: 0;
+    height: 42px;
+    width: 180px;
+    padding: 0px 20px;
+    margin-left: 34px;
+    font-size: 28px;
+    color: #0C82F1;
+    text-align: center;
+    line-height: 42px;
+    border-left: 2px solid #f2f3f3;
+  }
+}
+
 .register {
   width: 100%;
   .ds_register_bg {
@@ -36,7 +74,7 @@
 }
 .auth-label{
   display: flex;
-  margin: 0 30px;
+  margin: 0 60px;
   line-height: 40px;
   color: #929292;
   font-size: 24px;
@@ -47,15 +85,24 @@
   margin: 0 30px;
 }
 
+.describe {
+  margin-top: 30px;
+  margin-left: 30px;
+  font-size: 24px;
+  color: #929292;
+  letter-spacing: 0;
+  line-height: 36px;
+}
+
 .bindBtn {
-  width: 90% !important;
-  margin-left: 5%;
+  margin: 0px 30px;
+  width: 690px;
   background-image: linear-gradient(-45deg, #0C82F1 0%, #5DB2FF 100%);
   border-radius: 10px;
   color: #fff;
   height: 90px;
   line-height: 90px;
-  margin-top: 59px;
+  margin-top: 50px;
   padding: 0px;
   font-size: 32px;
 }
