@@ -1,0 +1,73 @@
+.page-help-with-coupon-rules {
+  background-color: #E72D3C;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  .help-with-coupon-rules-titlebar {
+    width: 100%;
+    flex-shrink: 0;
+  }
+  .page-help-with-coupon-rules-mainbox {
+    width: 100%;
+    flex: 1; //除titlebar所占用高度外, 填满其余高度
+    overflow-y: scroll;
+  }
+  .top-banner .top-banner-bannerpic{
+    width: 750px;
+    height: 600px;
+  }
+  .rules-content{
+    position: relative;
+    width: 90%;
+    background-color: #fff;
+    border-radius: 10rpx;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding:0 20rpx 30rpx 20rpx;
+  }
+  .rules-content .rules-content-pic{
+    width: 290px;
+    height: 85px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top:-24rpx;
+  }
+  .rules-content .rules-content-title{
+    text-align: center;
+    width: 94%;
+    position: absolute;
+    top: -6rpx;
+    color: #DE1B38;
+    font-size:34rpx;
+    font-weight: 600;
+  }
+  .rules-content .rules-content-main view{
+    color: #7A3A30;
+    font-size: 24rpx;
+    line-height: 36rpx;
+  }
+  .group-button-area {
+    position: relative;
+    margin-top: 32rpx;
+  }
+  .group-button-area .coupon-button-bg{
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+    height: 90px;
+  }
+  .group-button-area .coupon-button-text{
+    text-align: center;
+    position: relative;
+    top: -70rpx;
+    font-size: 30rpx;
+    color: #DE1B38;
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+  }
+
+
+}

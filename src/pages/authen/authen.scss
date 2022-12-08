@@ -1,0 +1,211 @@
+/* pages/auth/index.wxss */
+
+.auth-wrap{
+    background: #fff;
+    height: 100vh;
+}
+.register {
+  width: 100%;
+  .ds_register_bg {
+    width: 100%;
+    height: 295px;
+  }
+  .ds_register_bg image {
+    width: 100%;
+    height: 100%;
+  }
+  .loginBtn {
+    width: 90%;
+    margin-left: 5%;
+    background-image: linear-gradient(-45deg, #0C82F1 0%, #5DB2FF 100%);
+    border-radius: 10px;
+    color: #fff;
+    height: 90px;
+    line-height: 90px;
+    margin-top: 60px;
+    padding: 0px;
+  }
+  .otherPhNum {
+    font-size: 32px;
+    color: #0C82F1;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 44px;
+    margin-top: 53px;
+  }
+}
+.auth-label{
+  display: flex;
+  margin: 0 30px;
+  line-height: 40px;
+  color: #929292;
+  font-size: 24px;
+}
+
+.after-line {
+  display: flex;
+  margin: 0 30px;
+}
+
+.bindBtn {
+  width: 90% !important;
+  margin-left: 5%;
+  background-image: linear-gradient(-45deg, #0C82F1 0%, #5DB2FF 100%);
+  border-radius: 10px;
+  color: #fff;
+  height: 90px;
+  line-height: 90px;
+  margin-top: 59px;
+  padding: 0px;
+  font-size: 32px;
+}
+
+.agreement {
+  display: flex;
+  margin: 50px 69px;
+  line-height: 40px;
+  color: #333333;
+  font-size: 28px;
+
+  .agreementBD {
+    width: 40px;
+    height: 100%;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    .agreementBDTrue {
+      width: 30px;
+      height: 30px;
+      display: block;
+      flex-shrink: 0;
+    }
+    .agreementBDFalse {
+      width: 28px;
+      height: 28px;
+      flex-shrink: 0;
+      background-color: white;
+      border: 1px solid #c9c9c9;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+    }
+  }
+}
+.auth-flex{
+  margin: 0 30px;
+  line-height: 60px;
+  color:#929292;
+  font-size: 24px;
+  display:flex;
+}
+.auth-number{
+  line-height: 60px;
+  height: 60px;
+}
+.auth-content{
+  position: relative;
+  margin: 0 30px;
+  line-height: 60px;
+  color:#333;
+  font-size: 32px;
+}
+.number-line {
+  content: " ";
+  height: 2px;
+  border-top: 2px solid #eff0f0;
+  color: #eff0f0;
+  margin-bottom: 60px;
+}
+.auth-input{
+  width: 60%;
+  background: transparent;
+  margin: 20px 0;
+}
+.placeholder-class{
+  color:#ccc;
+}
+.after-line{
+  content: " ";
+  height: 2px;
+  border-top: 2px solid #eff0f0;
+  color: #eff0f0;
+  margin-bottom: 30px;
+}
+.getcode-btn{
+  position: absolute;
+  display: flex;
+  top:-10px;
+  right: 0;
+  width: 220px;
+  height:   60px;
+}
+.getcode-btn-before{
+  content: " ";
+  width: 2px;
+  height: 100%;
+  border-left:2px solid #eff0f0;
+  color: #eff0f0;
+  margin-right: 40px;
+}
+
+.auth-radio{
+  width:78px;
+  height:40px;
+  margin-right: 10px;
+}
+
+.footer {
+  width: 100%;
+  height: 387px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  .footerBg {
+    width: 100%;
+    height: 100%;
+  }
+  .downLoadCode {
+    width: 400px;
+    color: #3F5A6B;
+    position: absolute;
+    top: 125px;
+    left: 49px;
+    font-size: 24px;
+  }
+  .ds_reg_code {
+    position: absolute;
+    top: 82px;
+    right: 43px;
+    width: 136px;
+    height: 141px;
+  }
+  .at_tip {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 75px;
+    color: #FFFFFF;
+    font-size: 28px;
+  }
+  .at_tips {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 38px;
+    color: #B4DBFF;
+    font-size: 24px;
+  }
+}
+
+.jd-checkbox-input.jd-checkbox-input-checked {
+  border: 1px solid #0c82f1 !important;
+}
+
+button::after{ //百度小程序button边框
+  border: none;
+}

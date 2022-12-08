@@ -1,0 +1,689 @@
+.page-help-with-coupon-noscroll {
+  height: 100vh;
+  overflow: hidden;
+}
+.page-help-with-coupon {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  .help-with-coupon-titlebar {
+    width: 100%;
+    flex-shrink: 0;
+  }
+  .help-with-coupon-c {
+    background-color: #E72D3C;
+    width: 100%;
+    flex: 1; //除titlebar所占用高度外, 填满其余高度
+    overflow-y: scroll;
+  }
+
+  .top-banner {
+    position: relative;
+    background-color: #E72D3C;
+  }
+
+  .top-banner .top-banner-bannerpic {
+    width: 750px;
+    height: 600px;
+  }
+
+  .top-banner .top-banner-rules {
+    position: absolute;
+    right: 0;
+    bottom: 28px;
+    color: #DE1B39;
+    background-color: #FFD84F;
+    border-radius: 40px 0 0 40px;
+    font-size: 22px;
+    width: 100px;
+    padding: 6px 0px 6px 12px;
+  }
+
+  .group {
+    position: relative;
+    background-color: #E72D3C;
+    padding-bottom: 6px;
+  }
+
+  .group .group-pic {
+    width: 690px;
+    height: 296px;
+    margin-left: 30px;
+    margin-top: 14px;
+  }
+
+  .group .group-title {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    color: #FFE9D3;
+    font-size: 28px;
+    text-align: center;
+    background-color: transparent;
+  }
+
+  .group .group-title .group-title-area {
+    font-size: 32px;
+  }
+
+  .group .group-title .group-title-time {
+    font-size: 24px;
+    margin-top: 12px;
+  }
+
+  .group .group-contant {
+    width: 690px;
+    background-image: linear-gradient(180deg, #FEF8EA 0%, #FBDCBD 100%);
+    margin-top: -200px;
+    margin-left: 30px;
+    padding: 32px 0px 16px 0px;
+    border-radius: 12px;
+    color: #A41313;
+    font-weight: 600;
+  }
+
+  .group .group-contant .group-contant-coupon {
+    position: relative;
+    text-align: center;
+    font-size: 32px;
+    line-height: 32px;
+    .coupon-pic-left {
+      position: absolute;
+      top: 8px;
+      left: 30px;
+      width: 19px;
+      height: 19px;
+    }
+    .coupon-pic-right {
+      position: absolute;
+      top: 8px;
+      right: 30px;
+      width: 19px;
+      height: 19px;
+    }
+  }
+
+  /* 倒计时 */
+  .group-contant-endtime {
+    background: #FDDBBA;
+    width: 400px;
+    box-sizing: border-box;
+    border-radius: 30px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 10px 0;
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .group-contant-endtime .group-contant-endtime-text {
+    margin-right: 10px;
+  }
+
+  .group-contant-endtime .group-contant-endtime-e-text {
+    background: #DE1B38;
+    border-radius: 8px;
+    padding: 2px 5px;
+    color: #FFFFFF;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  .group-contant-dashed {
+    width: 86%;
+    border: 1px dashed #F0CBA3;
+    margin: 20px auto;
+  }
+
+  /* 助力中list */
+  .group-contant-list-continued,
+  .group-contant-list-add {
+    margin: 0 50px 20px 50px;
+    background: #FFF8EF;
+    border-radius: 12px;
+    box-shadow: -5px 5px 15px #f6bea9;
+    display: flex;
+    align-items: center;
+    height: 112px;
+  }
+
+  .group-contant-list-continued .coupon-contant-self {
+    margin-left: 30px;
+    width: 65px;
+    height: 65px;
+  }
+
+  .group-contant-list-continued .coupon-contant-info {
+    margin-left: 21px;
+    margin-right: 36px;
+  }
+
+  .group-contant-list-continued .coupon-contant-phone {
+    margin-top: 8px;
+    font-size: 28px;
+    line-height: 28px;
+    color: #A41313;
+    font-weight: 500;
+  }
+
+  .group-contant-list-continued .coupon-contant-time {
+    margin-top: 8px;
+    font-size: 24px;
+    line-height: 28px;
+    color: #D3A8A8;
+    font-weight: 500;
+  }
+
+
+
+  /* 仅差?人即可完成助力 */
+
+  .group-contant-list-add {
+    padding: 0px 30px;
+  }
+
+  .group-contant-list-add .coupon-contant-add {
+    width: 65px;
+    height: 65px;
+  }
+
+  .group-contant-list-add .coupon-contant-num {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 28px;
+    margin-left: 21px;
+  }
+
+
+  /* 助力成功list */
+  .group-contant-list-finished {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+  }
+
+  .group-contant-list-finished .coupon-contant-myinfo {
+    display: flex;
+    align-items: center;
+  }
+
+  .group-contant-list-finished .coupon-contant-self {
+    width: 38px;
+    height: 38px;
+  }
+
+  .group-contant-list-finished .coupon-contant-phone {
+    font-size: 28px;
+    line-height: 28px;
+    color: #DE1B38;
+    margin-left: 14px;
+  }
+
+  /* 助力完成list(附加助力中list) 好友获得的优惠券 */
+  .discount-coupon {
+    position: relative;
+    display: flex;
+  }
+
+  .discount-coupon .discount-coupon-picture {
+    width: 120px;
+    height: 70px;
+  }
+
+  .group-contant-list-continued .discount-coupon .discount-coupon-picture {
+    /*助力中*/
+    width: 148px;
+    height: 80px;
+  }
+
+  .discount-coupon .discount-coupon-info {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    text-align: center;
+  }
+
+  .discount-coupon .discount-coupon-info .discount-coupon-info-view {
+    font-size: 28px;
+    line-height: 35px;
+    color: #DE1B38;
+    font-weight: 500;
+  }
+
+  .group-contant-list-continued .discount-coupon-info .discount-coupon-info-view {
+    /* 助力中 */
+    line-height: 40px;
+    font-weight: 600;
+  }
+
+  .discount-coupon .discount-coupon-info .discount-coupon-info-text {
+    font-size: 20px;
+  }
+
+  .discount-coupon .discount-coupon-info .discount-coupon-info-view2 {
+    font-size: 24px;
+    line-height: 35px;
+    color: #DE1B38;
+  }
+
+  .group-contant-list-continued .discount-coupon .discount-coupon-info .discount-coupon-info-view2 {
+    /* 助力中 */
+    line-height: 39px;
+  }
+
+
+  /* 助力结束list */
+  .group-contant-list-finished .coupon-contant-time {
+    font-size: 24px;
+    line-height: 24px;
+    color: #BE9B95;
+  }
+
+  .group-button-area {
+    background: #FEF6EC;
+    border-radius: 12px;
+    width: 690px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+  }
+
+  .group-assis-end {
+    background: #fffcf8;
+    border-radius: 12px;
+    width: 690px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    margin-top: -200px;
+  }
+
+  .group-assis-end .group-assis-end-img {
+    display: block;
+    margin: 0 auto;
+    width: 250px;
+    height: 162px;
+    padding-top: 33px;
+  }
+
+  .group-assis-end .group-assis-end-title {
+    text-align: center;
+    color: #DE1B38;
+    padding-top: 37px;
+    font-size: 36px;
+    font-weight: 600;
+  }
+
+  .group-assis-end .group-assis-end-text {
+    text-align: center;
+    color: #A41313;
+    padding-top: 16px;
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+
+  /*按钮卡片*/
+  .group-button-area {
+    .group-button-dashed {
+      width: 86%;
+      margin: 0 auto;
+      border: 1px dashed #EA323E;
+    }
+    .button {
+      position: relative;
+      .coupon-button-bg {
+        width: 86%;
+        height: 100px;
+        margin-left: 7%;
+        margin-top: 40px;
+      }
+      .coupon-button-text {
+        position: absolute;
+        top: 44%;
+        left: 38%;
+        font-size: 32px;
+        color: #DE1B38;
+        font-weight: 600;
+      }
+    }
+  }
+
+
+  /* 页面底部 */
+  .group-bottom {
+    position: relative;
+    background-color: #E72D3C;
+    height: 385px;
+  }
+
+  .group-bottom .group-bottom-pic {
+    width: 750px;
+    height: 385px;
+  }
+
+  .group-bottom-content {
+    position: absolute;
+    top: 52px;
+    left: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .group-bottom-content .group-bottom-content-describe {
+    width: 420px;
+    font-size: 28px;
+    color: #FFECEC;
+  }
+
+  .group-bottom .group-bottom-content .group-bottom-content-qrcode {
+    width: 138px;
+    height: 138px;
+    margin-left: 132px;
+  }
+
+
+  .group-succ-area {
+    position: relative;
+    width: 690px;
+    margin: 0 auto;
+    margin-top: -200px;
+  }
+
+  .group-succ-area .group-succ-area-title {
+    background: #FDF7E9;
+    border-radius: 12px;
+    text-align: center;
+    color: #DE1B38;
+    font-size: 36px;
+    font-weight: 600;
+    padding: 40px 0;
+  }
+
+  .group-succ-area-title .group-succ-area-title-sub {
+    text-align: center;
+    color: #A41313;
+    font-size: 22px;
+    line-height: 60px;
+    font-weight: 400;
+  }
+
+  .group-succ-area-title .group-succ-area-title-sub text {
+    color: #DE1B38;
+    font-weight: 600;
+  }
+
+  .group-succ-area .group-succ-area-content {
+    background: #fffcf8;
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 10px 0px;
+  }
+
+  .group-succ-area .group-succ-area-dashed {
+    width: 80%;
+    margin: 0 auto;
+    border-bottom: 2px dashed #EA323E;
+    margin-top: -10px;
+  }
+
+  .group-succ-area .group-succ-coupon-pic-left {
+    width: 20.9px;
+    height: 28.2px;
+    padding-right: 30px;
+  }
+
+  .group-succ-area .group-succ-coupon-pic-right {
+    width: 20.9px;
+    height: 28.2px;
+    padding-left: 30px;
+  }
+
+
+  /* 视图容器 */
+  .selector-page-bg {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.6);
+
+    /* 视图容器中 选择领券地区 */
+    .selector-bg {
+      display: block;
+      margin: 0 auto;
+      margin-top: 45px;
+      width: 500px;
+      height: 648px;
+    }
+
+    .selector-content {
+      margin-top: -530px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+
+    .selector-content-title {
+      font-size: 42px;
+      color: #FFFFFF;
+      line-height: 120px;
+    }
+
+    /* 视图容器中 选择器----------- */
+    .page-help-with-coupon-picker {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 700px;
+      background-color: white;
+    }
+
+    .page-help-with-coupon-picker-title {
+      width: 100%;
+      height: 100px;
+      line-height: 100px;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 40px;
+      box-sizing: border-box;
+      background: #fff;
+      border-radius: 20px 20px 0 0;
+      color: black;
+    }
+
+    .page-help-with-coupon-picker-title-text {
+      font-size: 32px;
+      color: black;
+    }
+
+    .page-help-with-coupon-picker-view {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 600px;
+    }
+
+    .page-help-with-coupon-picker-item {
+      width: 100%;
+      text-align: center;
+    }
+
+    .selector-picker {
+      width: 452px;
+      height: 88px;
+      border-radius: 2px;
+      background-color: rgba(0, 0, 0, 0.08);
+      position: relative;
+    }
+
+    .selector-picker .selector-select {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      right: 20px;
+      top: 39px;
+    }
+
+    .selector-picker .selector-picker-view {
+      line-height: 88px;
+      width: 100%;
+      color: #FFFFFF;
+      font-size: 38px;
+      font-weight: 500;
+      text-indent: 24px;
+      box-sizing: border-box;
+      padding-right: 60px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      word-break: break-all;
+    }
+
+    .select-content-annotation {
+      font-size: 30px;
+      color: #FFFFFF;
+      width: 451px;
+      margin-top: 16px;
+      line-height: 45px;
+    }
+
+    .selector-get {
+      width: 400px;
+      height: 100px;
+      opacity: 0;
+      position: absolute;
+      left: 180px;
+      top: 380px;
+    }
+
+    .selector-close {
+      display: block;
+      width: 54px;
+      height: 54px;
+      margin-top: 256px;
+    }
+  }
+
+  /* 弹层 */
+  .common-toast-tips {
+    .common-toast-tips-bg {
+      background: #000;
+      opacity: 0.5;
+      position: fixed;
+      top: 0;
+      bottom:0;
+      left: 0;
+      right:0;
+    }
+
+    .position-view {
+      position: absolute;
+      top: 400rpx;
+      left: calc(50% - 250rpx)
+    }
+
+    .common-toast-tips-contant {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+    }
+
+    .common-toast-tips-bg-pic0 {
+      display: block;
+      width: 500rpx;
+      height: 485rpx;
+    }
+    .common-toast-tips-bg-pic12 {
+      display: block;
+      width: 500rpx;
+      height: 546rpx;
+    }
+    .common-toast-tips-bg-pic34 {
+      display: block;
+      width: 500rpx;
+      height: 397rpx;
+    }
+
+    .common-toast-tips-close-pic {
+      display: block;
+      margin-top: 40rpx;
+      width: 54rpx;
+      height: 54rpx;
+    }
+
+    .common-toast-tips-main{
+      width: 420rpx;
+      position: absolute;
+      top: 190rpx;
+      left: calc(50% - 210rpx);
+      text-align: center;
+      color: white;
+      font-size: 42rpx;
+      line-height: 60rpx;
+    }
+    /* 弹层 */
+    .a-great-success {
+      font-size: 38px;
+      line-height: 57px;
+      margin-top: -45px
+    }
+
+    .a-complete-failure {
+      font-size: 38px;
+      line-height: 57px;
+    }
+
+    .i-got-this-coupon {
+      margin-top: 30px;
+      font-size: 38px;
+      line-height: 72px;
+      color: #A41313;
+      font-weight: 600;
+    }
+
+    .i-got-this-coupon-text {
+      font-size: 48px;
+      color: #de1b38;
+    }
+
+    .i-want-to-initiate {
+      margin-top: 48px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .i-want-to-initiate-image {
+      width: 392px;
+      height: 96px;
+    }
+
+    #i-want-to-initiate-view {
+      width: 392px;
+      height: 96px;
+      padding: 0px 0px;
+      margin-top: -98px;
+      text-align: center;
+      color: #DE1B38;
+      font-size: 32px;
+      line-height: 96px;
+      font-weight: 600;
+      background-color: rgba(0, 0, 0, 0);
+      border: none;
+    }
+  }
+
+
+
+}

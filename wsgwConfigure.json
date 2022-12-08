@@ -1,0 +1,21 @@
+{
+    "projectName":{
+        "businessCharge":"B10070200",
+        "couponCollectionCenter":"B10074200",
+        "elePrepaidCard":"B10070300",
+        "eleRedpacket":"B10074600",
+        "enterpriseIntegral ":"B10072100",
+        "groupBill":"B10076700",
+        "groupCharge":"B10075300",
+        "integralMall":"B10080000",
+        "myAssets":"B40070000",
+        "myCoupon":"myCoupon",
+        "rewardResult":"rewardResult",
+        "serviceRecordDetail":"B10076969",
+        "yearBill":"B10076809",
+        "wsgwEleChage":"careEle",
+        "activitiesPro":"activitiesPro",
+        "taroBaseProject":"B10079500"
+
+    }
+}

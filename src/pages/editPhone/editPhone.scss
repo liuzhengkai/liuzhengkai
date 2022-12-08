@@ -1,0 +1,44 @@
+/* pages/auth/index.wxss */
+.auth-wrap{
+  background-color:#EDEDED;
+  height: 100vh;
+  display:flex;
+  flex:1;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.auth-flex{
+  padding: 0 30rpx;
+  height: 130rpx;
+  line-height: 60rpx;
+  color:#333;
+  border-top: 1rpx solid #EDEDED;
+  font-size: 28rpx;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+}
+
+.auth-btn{
+  margin:  42rpx 15rpx;
+  width: calc(100% - 30rpx) !important;
+  background: linear-gradient(-45deg,#0c82f1 0%,#5db2ff 100%);
+  border:0;
+  color:#fff;
+  font-size:32rpx;
+  height:90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  border-radius: 10rpx;
+}
+
+
+.auth-btn::after{
+  display: none;
+}
+
+button::after{ //百度小程序button边框
+  border: none;
+}

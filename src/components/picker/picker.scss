@@ -1,0 +1,90 @@
+  .picker_view_integral {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+  }
+
+  .picker_view {
+    background: #fff;
+    position: fixed;
+    bottom: 0;
+    left:0;
+    right:0;
+    z-index: 999;
+  }
+
+  .picker_view_title {
+    display: flex;
+    justify-content: space-between;
+    height: 112px;
+    line-height: 112px;
+    padding: 0 5%;
+    box-sizing: border-box;
+  }
+
+  .close {
+      width: 200px;
+      font-size: 50px; 
+  }
+
+  .no {
+      width: 200px;
+      text-align: right;
+  }
+
+  .tipsInfo {
+      display: flex;
+      justify-content: space-between;
+      font-size: 24px;
+      height: 60px;
+      line-height: 60px;
+      background: #FFF6E7;
+      color: #DA392C;
+      padding: 0 5%;
+      box-sizing: border-box;
+  }
+
+  .text {
+    padding: 10px 5%;
+    line-height: 32px;
+    color: #333333;
+    font-size: 26px;
+    position: relative;
+  }
+
+  .pk_tips {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    margin-left: 4px;
+    margin-top: 4px;
+  }
+
+  .un-red-Envelope-box {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .un-red-Envelope {
+    width: 200px;
+    height: 230px;
+  }
+
+  .btn {
+    width: 90%!important;
+    height: 100px;
+    line-height: 100px;
+    margin-left: 5%;
+    background-image: linear-gradient(-45deg, #0C82F1 0%, #5DB2FF 100%);
+    color: #fff;
+    font-weight: normal;
+    font-size: 32px;
+    padding: 0px;
+  }

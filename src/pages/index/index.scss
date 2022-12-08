@@ -1,0 +1,264 @@
+#theFixedBox {
+  position:fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+}
+
+.root {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  .swan-login {
+    display: block !important;
+    position: absolute !important;
+    z-index: 999 !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    background-color: rgba(0,0,0,0) !important;//
+    border-radius: 0;
+  }
+}
+.custom {
+  width: 100%;
+}
+
+.header {
+  width: 100%;
+  color: white;
+  // position: absolute;
+  font-size: 32rpx;
+  height: 68rpx;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+}
+
+.title{
+  margin-left: 5%;
+}
+
+.address-box {
+  display: flex;
+  align-items: center;
+}
+
+.spot {
+  margin: 0 10rpx;
+}
+
+.ds_guide_headerBg {
+  width: 100%;
+  height: 536rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.ds_guide_set {
+  width: 40rpx;
+  height: 35.5rpx;
+  margin-left: 150rpx;
+}
+
+.InvertedTriangle {
+  width: 0;
+  height: 0;
+  border-top: 10rpx solid #fff;
+  border-right: 10rpx solid transparent;
+  border-left: 10rpx solid transparent;
+  margin-left: 10rpx
+}
+
+.location {
+  // margin-top: 10%;
+}
+
+.center {
+  width: 100%;
+}
+
+.userInfo {
+  display: flex;
+  width: 100%;
+  margin: 53rpx 0 0 32rpx;
+  height: 100rpx;
+  align-items: center;
+}
+
+.ds_guide_noHeadP {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.greetings {
+  font-size: 32rpx;
+  color: #FFFFFF;
+  margin-left: 24rpx;
+}
+
+.login_tips {
+  font-size: 28rpx;
+}
+
+.func {
+  width: 90%;
+  height: 280rpx;
+  margin-left: 5%;
+  background-image: linear-gradient(180deg, #1CB8F9 0%, #3899F4 100%);
+  box-shadow: 0 10rpx 30rpx 0 rgba(0,0,0,0.04);
+  border-radius: 14rpx 14rpx 0 0;
+  margin-top: 49rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.func_con {
+  width: 100%;
+  height: 100%;
+  background: #FFFFFF;
+  border-radius: 8rpx 8rpx 0 0;
+  padding: 25rpx 38rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+
+.func_con_item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.func_con_item_img {
+  width: 121rpx;
+  height: 121rpx;
+}
+
+.func_con_item_text {
+  font-size: 31rpx;
+  color: #333333;
+  letter-spacing: 0;
+  margin-top: 24rpx;
+}
+
+.line {
+  width: 73rpx;
+  display: flex;
+  justify-content: center;
+  margin-top: 44rpx;
+  color: #C8C8C8;
+  font-size: 18rpx;
+  font-weight: 900;
+}
+
+.immediatelyPay {
+  width: 90%;
+  height: 300rpx;
+  margin-left: 5%;
+  margin-top: 20rpx;
+  position: relative;
+}
+
+.ds_guide_immediatelyPay {
+  width: 100%;
+  height: 100%;
+}
+
+.immediatelyPay_btn, .immediatelyQuery_btn {
+  width: 200rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+  background-image: linear-gradient(0deg, #6AC0A7 0%, #ACDCC3 100%);
+  border-radius: 35rpx;
+  color: #fff;
+  font-size: 32rpx;
+  position: absolute;
+  bottom: 42rpx;
+  left: 46rpx;
+}
+
+.immediatelyQuery_btn {
+  background-image: linear-gradient(180deg, #FDDC69 0%, #FFBD62 100%);
+}
+
+.footer {
+  width: 100%;
+  height: 106rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.ds_guide_hotLine {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.hotLineNum {
+  font-size: 28rpx;
+  color: #333333;
+  letter-spacing: 0;
+  margin-left: 20rpx;
+}
+
+
+
+
+
+
+
+.venus-ccsk-input {
+  height: 24px;
+  width: 100%;
+  font-size: 32rpx;
+  color: #bfbfbf;
+  line-height: 24px;
+  padding-left: 2px;
+}
+
+
+.titleBarTest{
+  border:1px solid #f00;
+  background:#abc;
+}
+
+.wrapper {
+  padding: 0 5%;
+  box-sizing: border-box;
+}
+
+.input_accountNumber {
+  margin-top: 400px;
+}
+
+.input_accountNumber, .input_password {
+  width: 50%;
+  border: solid 1px #ccc;
+  margin-top: 30px;
+  margin-left: 25%;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.btn {
+  width: 90% !important;
+  height: 100px;
+  line-height: 100px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 5%;
+  background-image: linear-gradient(-45deg, #0C82F1 0%, #5DB2FF 100%);
+  color: #fff;
+}

@@ -1,0 +1,150 @@
+
+/* pages/auth/index.wxss */
+
+.unbind-wrap{
+  height: 100vh;
+  background-color:#EDEDED;
+}
+.unbind-form{
+  background-color:#fff;
+  margin-bottom: 48rpx;
+}
+.unbind-label{
+  margin: 0 30rpx;
+  line-height: 60rpx;
+  color:#929292;
+  font-size: 28rpx;
+}
+/* 手机部分 */
+.unbind-phone{
+  padding: 64rpx 30rpx 0;
+  line-height: 60rpx;
+  color:#929292;
+  font-size: 28rpx;
+}
+.phone-title{
+  font-family: PingFangSC-Regular;
+font-size: 28rpx;
+color: #333333;
+letter-spacing: 0;
+text-align: center;
+line-height: 28rpx;
+margin-bottom: 20rpx;
+}
+.unbind-number{
+  line-height: 60rpx;
+  height: 60rpx;
+  font-family: PingFangSC-Medium;
+  font-size: 32px;
+  color: #333333;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 28px;
+}
+/* 提示语 */
+.tips-box{
+
+  box-sizing: border-box;
+  margin: 30rpx;
+  padding: 40rpx 30rpx;
+  border: 1px solid #0C82F1;
+  border-radius: 10rpx;
+  border-radius: 10rpx;
+  background: #E6F2FD;
+   color: #333333;
+   letter-spacing: 0;
+}
+.tips-content{
+  display: flex;
+  align-items: center;
+}
+.tips-title{
+  font-size: 32rpx;
+  font-weight: 700;
+  line-height: 28rpx;
+  margin-bottom: 30rpx;
+}
+.leftArrow {
+  width: 90px;
+  height:90px;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+.tips-text{
+  font-size: 30rpx;
+
+
+text-align: justify;
+line-height: 45rpx;
+}
+
+
+.unbind-content{
+  line-height: 60rpx;
+  color:#333;
+  font-size: 32rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.after-tips{
+  margin:40rpx 0 0 50rpx;
+  font-family: PingFangSC-Regular;
+font-size: 24px;
+color: #929292;
+letter-spacing: 0;
+line-height: 24px;
+}
+.padb-30{
+  padding: 30rpx 0rpx 30rpx 30rpx;
+}
+.unbind-input{
+  flex: 1;
+}
+.unbind-btn{
+  margin:  0rpx 15rpx ;
+  width: calc(100% - 30rpx) !important;
+  background: linear-gradient(-45deg,#0c82f1 0%,#5db2ff 100%);
+  border:0;
+  color:#fff;
+  font-size:32rpx;
+  height:90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  border-radius: 10rpx;
+}
+
+
+.unbind-btn::after{
+  display: none;
+}
+.placeholder-class{
+  color:#ccc;
+}
+.after-line{
+  content: " ";
+  height: 2rpx;
+  border-top: 2rpx solid #eff0f0;
+  color: #eff0f0;
+  margin: 20rpx 20rpx;
+}
+.getcode-btn{
+  width: 220rpx;
+  height: 60rpx;
+  flex-shrink: 0;
+}
+
+.unbind-tips{
+  font-size: 24rpx;
+}
+
+.code-box{
+  width: 100%;
+  border-left: 2rpx solid #eff0f0;
+}
+.getcode-text{
+  width: 100%;
+  text-align: center;
+}
+button::after{ //百度小程序button边框
+  border: none;
+}
