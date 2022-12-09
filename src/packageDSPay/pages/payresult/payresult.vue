@@ -99,6 +99,7 @@
 </template>
 
 <script>
+  import Taro from "@tarojs/taro";
   import './payresult.scss'
   import { dsUtils } from "@/dsUtils";
   import TitleBar from "@/components/titleBar/titleBar";
@@ -223,10 +224,14 @@
         if (process.env.TARO_ENV == 'h5') {
           dsUtils.bridge_close()
         } else {//支付宝
-          dsUtils.navigateTo({
-            url: "/pages/index/index",
-            flag: 'reLaunch'
-          });
+          let pageNumber = 0
+          let pageArr = Taro.getCurrentPages()
+          pageArr.forEach((item, index) => {
+            if (item?.data?.root?.uid.indexOf('pages/index/index') > -1) {
+              pageNumber = pageArr.length - 1 - index;
+            }
+          })
+          dsUtils.navigateBack(pageNumber);
         }
       },
 
@@ -234,10 +239,14 @@
         if (process.env.TARO_ENV == 'h5') {
           dsUtils.bridge_close()
         } else {//支付宝
-          dsUtils.navigateTo({
-            url: "/pages/index/index",
-            flag: 'reLaunch'
-          });
+          let pageNumber = 0
+          let pageArr = Taro.getCurrentPages()
+          pageArr.forEach((item, index) => {
+            if (item?.data?.root?.uid.indexOf('pages/index/index') > -1) {
+              pageNumber = pageArr.length - 1 - index;
+            }
+          })
+          dsUtils.navigateBack(pageNumber);
         }
         dsUtils.dataCollection({
           "ACTTYPE": '0301',

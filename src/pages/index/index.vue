@@ -29,7 +29,7 @@
       <!-- ---------------------------------------------------------下单信息开始--------------------------------------------------------- -->
       
       <image class="seize" v-show="showSeize" @tap="goAddConsPage" src="../../assets/images/ds_seize.png"/>
-      <view class="detailData" v-show="!showSeize">
+      <scroll-view class="detailData" v-show="!showSeize" :scroll-y="true" :scrollTop="scrollTop">
         <!-- 数据差异化开始 -->
         <!-- :scroll-y="true" class="page-view" :class="{'TitleBar_Alipay': taroEnv != 'h5','TitleBar_H5':taroEnv == 'h5', 'TitleBar_H5_lf': taroEnv == 'h5'&& module_lf}" -->
         <view class="page-view-card">
@@ -475,7 +475,7 @@
         </view>
         <!-- 购电金额 end -->
         <TableBar @goBack="goBack" @goHome="goHome" class="pay-electricity-charges-tablebar"></TableBar>
-      </view>
+      </scroll-view>
       <!-- ---------------------------------------------------------下单信息结束--------------------------------------------------------- -->
     
     </view>
@@ -492,8 +492,8 @@
           </view>
         </view>
         <!-- 立返文案展示结束 -->
-        <view @tap="confirmPay" v-show="isPay" :class="{'foot-btn':true, 'click-btn': isPay && taroEnv != 'h5', 'click-btn-green': isPay && taroEnv == 'h5', 'not-click-btn': !isPay && taroEnv != 'h5', 'not-click-btn-green': !isPay && taroEnv == 'h5'} ">立即支付￥{{splitActualMoney[0]}}.{{splitActualMoney[1]}}</view>
-        <view @tap="confirmPay" v-show="!isPay" :class="{'foot-btn':true, 'click-btn': isPay && taroEnv != 'h5', 'click-btn-green': isPay && taroEnv == 'h5', 'not-click-btn': !isPay && taroEnv != 'h5', 'not-click-btn-green': !isPay && taroEnv == 'h5'} ">立即支付</view>
+        <view @tap="confirmPay" v-if="isPay" :class="{'foot-btn':true, 'click-btn': isPay && taroEnv != 'h5', 'click-btn-green': isPay && taroEnv == 'h5', 'not-click-btn': !isPay && taroEnv != 'h5', 'not-click-btn-green': !isPay && taroEnv == 'h5'} ">立即支付￥{{splitActualMoney[0]}}.{{splitActualMoney[1]}}</view>
+        <view @tap="confirmPay" v-else :class="{'foot-btn':true, 'click-btn': isPay && taroEnv != 'h5', 'click-btn-green': isPay && taroEnv == 'h5', 'not-click-btn': !isPay && taroEnv != 'h5', 'not-click-btn-green': !isPay && taroEnv == 'h5'} ">立即支付</view>
       </view>
       <view class="shortcuts">
         <view v-show="isLogin"><text @tap="addConsBtn">新增交费户号</text>&nbsp;|&nbsp;</view>
@@ -639,6 +639,7 @@ export default {
       careEnv: '', //控制样式 普通版0 关怀版1
       taroEnv: process.env.TARO_ENV,// 当前环境
       showAddCons: false, // 展示添加户号弹框
+      scrollTop: '0',
       //交费金额相关--------------------------------
       checkedArr: [], //金额块数组
       checkedIndex: null, //当前选中的金额块
@@ -1290,11 +1291,7 @@ export default {
 		},
 
     goAddConsPage() { // 占位图片按钮事件
-      dsUtils.loginDispatcher().then((res)=>{
-        dsUtils.navigateTo({
-          url: "/packageDSEleCharge/pages/addElePowerNum/addElePowerNum"
-        })
-      })
+      dsUtils.loginDispatcher('/packageDSEleCharge/pages/addElePowerNum/addElePowerNum')
     },
 
     goNativeEleList() { // 电费公告跳转
@@ -2078,6 +2075,7 @@ export default {
     moneyInputFocus() { // 金额输入框得到焦点
       this.inputFocus = true //高亮
       this.checkedIndex = null
+      this.scrollTop = '2000'
     },
 
     moneyInputBlur(){// 金额输入框失去焦点

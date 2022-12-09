@@ -191,7 +191,7 @@ const request = (url, options) => {
         //成功日志打印
         log('【请求url地址】 ' + url)
         log(options.params, true)
-        log(res.data, true)
+        log(res, true)
       }, (err) => {
         options.fail && options.fail(err)
         log('【请求url地址】' + url)
@@ -214,7 +214,7 @@ const request = (url, options) => {
         // resolve()
         log('【请求url地址】' + url)
         log(options.params, true)
-        log(res.data, true)
+        log(res, true)
         console.log('【请求url地址】' + url)
         console.log(options.params)
         console.log(res)
@@ -286,7 +286,7 @@ const requestToken = (url, options) => {
     //成功日志打印
     log('【请求url地址】 ' + url)
     log(options.params, true)
-    log(res.data, true)
+    log(res, true)
   }, (err) => {
     options.fail && options.fail(err)
     log('【请求url地址】' + url)
